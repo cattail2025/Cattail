@@ -1,0 +1,46 @@
+name: Static Site CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install HTMLHint
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y npm
+          npm install -g htmlhint
+
+      - name: Lint HTML
+        run: htmlhint index.html
+
+      - name: Install Stylelint
+        run: |
+          npm init -y
+          npm install --save-dev stylelint stylelint-config-standard
+
+      - name: Lint CSS
+        run: npx stylelint "style.css"
+
+  deploy:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.1.3
+        with:
+          branch: gh-pages  # Deploy to 'gh-pages' branch
+          folder: .  # Deploy from the root directory
