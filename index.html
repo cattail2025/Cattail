@@ -3,70 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サービス - Cat Tail ヘアサロン</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <title>Cat Tail ヘアサロン</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Cat Tail ヘアサロン</h1>
+        <h1 class="logo">Cat Tail ヘアサロン</h1>
         <nav>
             <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="about.html">私たちについて</a></li>
-                <li><a href="services.html">サービス</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">当サロンについて</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h2>プロフェッショナルな理容サービス</h2>
+    <section id="home" class="hero">
+        <h2>美しさと癒しの空間</h2>
+        <p>プロの技術であなたの魅力を最大限に引き出します。</p>
     </section>
 
-    <!-- Image Slider Section -->
-    <section class="slider-container">
-        <div class="slider">
-            <img src="salon1.jpg" alt="Salon Image 1">
-            <img src="salon2.jpg" alt="Salon Image 2">
-            <img src="salon3.jpg" alt="Salon Image 3">
-            <img src="salon5.jpg" alt="Salon Image 4">
-            <img src="salon6.jpg" alt="Salon Image 5">
+    <section id="about">
+        <h2>当サロンについて</h2>
+        <p>Cat Tail ヘアサロンは、20年以上の経験を持つスタイリストによる高品質なサービスを提供する理容室です。土曜日は女性限定の特別な癒しの時間をお楽しみいただけます。</p>
+    </section>
+
+    <section id="services">
+        <h2>サービス</h2>
+        <div class="service-container">
+            <div class="service-category">
+                <h3>レディース</h3>
+                <ul>
+                    <li>カット（シャンプー・ブロー込） - ¥4,400</li>
+                    <li>前髪カット - ¥1,100</li>
+                    <li>カラー + 補修トリートメント - ¥4,500</li>
+                    <li>白髪染め + 補修トリートメント - ¥4,500</li>
+                    <li>リタッチカラー - ¥3,800</li>
+                    <li>クイックトリートメント - ¥1,200</li>
+                    <li>お顔剃り + 仕上げ - ¥3,300</li>
+                    <li>お顔マッサージ & パック - ¥2,500</li>
+                </ul>
+            </div>
+            <div class="service-category">
+                <h3>メンズ</h3>
+                <ul>
+                    <li>カット（シャンプー・ドライ込） - ¥2,900</li>
+                    <li>カット（顔・えり剃り込） - ¥3,000</li>
+                    <li>グレーカラー（ぼかし） - ¥2,900</li>
+                    <li>白髪染め（シャンプー・ドライ込） - ¥3,400</li>
+                    <li>頭皮毛穴クレンジング - ¥1,900</li>
+                    <li>お顔クイックマッサージ - ¥600</li>
+                    <li>コールドクリーム使用お顔マッサージ - ¥1,400</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section class="services">
-        <h2>私たちのサービス</h2>
-        <div class="service-category">
-            <h3>カット</h3>
-            <ul>
-                <li>カットのみ - ¥2,200</li>
-                <li>レディースカット（シャンプー・ブロー込） - ¥4,400</li>
-                <li>前髪カット - ¥1,100</li>
-                <li>メンズカット（シェービング・シャンプー・ドライ） - ¥2,900</li>
-                <li>メンズカット（顔・襟剃り込み） - ¥3,000</li>
-            </ul>
-        </div>
-        <div class="service-category">
-            <h3>カラーリング</h3>
-            <ul>
-                <li>メンズグレーカラー - ¥2,900</li>
-                <li>レディースリタッチ - ¥3,800</li>
-                <li>オーガニックハーブカラー - ¥4,500</li>
-                <li>白髪染め - ¥4,500</li>
-            </ul>
-        </div>
-        <div class="service-category">
-            <h3>フェイシャル & シェービング</h3>
-            <ul>
-                <li>レディースシェービング - ¥3,300</li>
-                <li>メンズフェイシャルシェービング - ¥1,900</li>
-            </ul>
-        </div>
+    <section id="contact">
+        <h2>お問い合わせ</h2>
+        <p>ご予約やお問い合わせは、以下の方法でお気軽にご連絡ください。</p>
+        <ul>
+            <li>電話: 〇〇〇-〇〇〇〇-〇〇〇〇</li>
+            <li>メール: info@cattailinfo.com</li>
+            <li>LINE: @cattail</li>
+        </ul>
     </section>
 
     <footer>
-        <p>© 2025 Cat Tail ヘアサロン</p>
+        <p>© 2025 Cat Tail ヘアサロン | 全ての権利を保有</p>
     </footer>
+
 </body>
 </html>
