@@ -8,6 +8,9 @@
     <!-- Google Fonts Link -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
     <!-- Your existing styles.css link -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -27,7 +30,7 @@
     </header>
 
     <!-- Hero Section with Image Carousel -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" data-aos="fade-up">
         <h2>美しさと癒しの空間</h2>
         <p>プロの技術であなたの魅力を最大限に引き出します。</p>
 
@@ -45,7 +48,7 @@
     </section>
 
     <!-- About Our Shop Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" data-aos="fade-left">
         <div class="about-text">
             <h2>当サロンについて</h2>
             <p>土曜日の女性用の予約は電話のみだけ</p>
@@ -54,7 +57,7 @@
     </section>
 
     <!-- Services and Contact Sections (Unchanged) -->
-    <section id="services">
+    <section id="services" data-aos="fade-right">
         <h2>サービス</h2>
         <div class="service-container">
             <div class="service-category">
@@ -85,7 +88,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <h2>お問い合わせ</h2>
         <p>ご予約やお問い合わせは、以下の方法でお気軽にご連絡ください。</p>
         <ul>
@@ -101,5 +104,15 @@
         <p>© 2025 Cat Tail ヘアサロン | 全ての権利を保有</p>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true // Run animation only once
+        });
+    </script>
 </body>
 </html>
