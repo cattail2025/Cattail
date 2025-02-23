@@ -47,12 +47,12 @@ nav ul li a {
 
 /* Hero Section (Image Carousel) */
 .hero {
-    padding-top: 80px; /* Account for the fixed header */
+    padding-top: 100px; /* Increased padding for more space */
     text-align: center;
     color: white;
     position: relative;
     z-index: 1;
-    height: auto; /* Adjust height based on content */
+    height: 600px; /* Increased height to allow more space for text and images */
 }
 
 .hero h2 {
@@ -68,7 +68,7 @@ nav ul li a {
 .carousel {
     position: relative;
     width: 100%;
-    height: 300px; /* Adjust the height based on your design */
+    height: 300px; /* Adjust the height to make it more visible */
     margin: 30px 0; /* Space between the carousel and text */
     overflow: hidden;
     display: flex;
