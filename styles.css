@@ -61,7 +61,7 @@ nav ul li a {
     height: 100%;
     display: flex;
     overflow: hidden;
-    z-index: -1; /* Make sure carousel images are behind text */
+    z-index: -1; /* Ensure carousel images are behind text */
 }
 
 .carousel img {
