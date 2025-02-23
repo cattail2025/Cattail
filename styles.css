@@ -247,7 +247,7 @@ html {
     padding: 20px 40px; /* Increase padding to make it bigger */
     font-size: 3rem; /* Make the text very large */
     font-weight: bold;
-    background-color: red; /* Set background to red */
+    background-color: red !important; /* Set background to red */
     color: white; /* White text for contrast */
     text-align: center;
     text-decoration: none; /* Remove underline */
