@@ -50,7 +50,7 @@ nav ul li a {
     font-size: 1.1rem;
 }
 
-/* Hero Section (Image Carousel with 3D effect) */
+/* Hero Section */
 .hero {
     padding-top: 100px; /* Increased padding */
     text-align: center;
@@ -58,22 +58,6 @@ nav ul li a {
     height: 750px; /* Increased height */
     position: relative;
     z-index: 1;
-    overflow: hidden;
-    perspective: 1000px; /* Set perspective for 3D effect */
-}
-
-/* 3D Moving Background */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('your-image.jpg') no-repeat center center/cover; /* Replace with your background image */
-    transform: translateZ(-1px) scale(1.5); /* Apply 3D effect */
-    z-index: -1;
-    pointer-events: none;
 }
 
 /* Hero Text */
@@ -111,4 +95,76 @@ nav ul li a {
     animation: slide 30s infinite;
 }
 
-.car
+.carousel-image:nth-child(1) { animation-delay: 0s; }
+.carousel-image:nth-child(2) { animation-delay: 5s; }
+.carousel-image:nth-child(3) { animation-delay: 10s; }
+.carousel-image:nth-child(4) { animation-delay: 15s; }
+.carousel-image:nth-child(5) { animation-delay: 20s; }
+.carousel-image:nth-child(6) { animation-delay: 25s; }
+
+@keyframes slide {
+    0%, 100% {
+        opacity: 0;
+    }
+    16.66%, 33% {
+        opacity: 1;
+    }
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* About Section */
+#about {
+    background-color: black;
+    color: white;
+    padding: 80px 0;
+    font-family: 'Roboto Slab', serif; /* Apply Roboto Slab font */
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif; /* Apply Roboto Slab font to paragraphs */
+}
+
+#about h2 {
+    font-family: 'Roboto Slab', serif; /* Apply Roboto Slab font to headings */
+    font-weight: 700; /* Optional: make the heading bold */
+}
+
+/* Services Section */
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-category li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
