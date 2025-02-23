@@ -75,12 +75,12 @@ nav ul li a {
     opacity: 0;
 }
 
-.carousel-image:nth-child(1) { animation-delay: 0s; }
-.carousel-image:nth-child(2) { animation-delay: 5s; }
-.carousel-image:nth-child(3) { animation-delay: 10s; }
-.carousel-image:nth-child(4) { animation-delay: 15s; }
-.carousel-image:nth-child(5) { animation-delay: 20s; }
-.carousel-image:nth-child(6) { animation-delay: 25s; }
+.carousel-image:nth-child(1) { animation-delay: 5s; }
+.carousel-image:nth-child(2) { animation-delay: 6s; }
+.carousel-image:nth-child(3) { animation-delay: 7s; }
+.carousel-image:nth-child(4) { animation-delay: 8s; }
+.carousel-image:nth-child(5) { animation-delay: 9s; }
+.carousel-image:nth-child(6) { animation-delay: 10s; }
 
 @keyframes slide {
     0%, 100% {
@@ -89,6 +89,13 @@ nav ul li a {
     16.66%, 33% {
         opacity: 1;
     }
+}
+
+/* Adjusting Hero Text */
+.hero h2, .hero p {
+    position: relative;
+    z-index: 1; /* Ensure the text stays on top of the images */
+    margin-top: 150px; /* Adjust this value to move the text lower */
 }
 
 /* About Section */
