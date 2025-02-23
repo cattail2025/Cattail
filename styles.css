@@ -60,7 +60,6 @@ nav ul li a {
     z-index: 1;
 }
 
-/* Hero Text */
 .hero-text {
     font-size: 2rem;
     font-weight: bold;
@@ -167,4 +166,46 @@ footer {
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        height: auto; /* Adjust height to auto on smaller screens */
+        padding-top: 80px; /* Adjust padding */
+    }
+    
+    /* Reduce the logo size */
+    header .logo {
+        font-size: 1.5rem;
+    }
+    
+    /* Adjust text size */
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+    /* Stack services on mobile */
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Adjust navigation for mobile */
+    nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Adjust footer for better readability */
+    footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
 }
