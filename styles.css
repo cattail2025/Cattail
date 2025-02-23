@@ -1,102 +1,172 @@
-/* Set Gradient Background for the whole page */
+/* Global styles */
 body {
-    background: linear-gradient(to bottom right, #00b894, #6c5ce7);
-    color: white;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(135deg, #6a1b9a, #4caf50); /* Green to Purple gradient */
+    color: white;
 }
 
+/* Header */
 header {
-    background-color: transparent;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 header .logo {
-    font-size: 3em;
+    font-size: 2rem;
     font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    letter-spacing: 1px;
-    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #f39c12;
-}
-
-/* Home Section */
-.hero {
+header nav ul {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Hero Section with Image Carousel */
+#home {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
 }
 
 .carousel {
-    width: 80%;
-    margin: 20px 0;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .carousel-image {
+    position: absolute;
+    opacity: 0;
+    animation: carouselAnimation 24s infinite ease-in-out;
     width: 100%;
-    height: auto;
-    animation: slide 12s infinite;
-    transition: all 1s ease;
+    height: 100%;
+    object-fit: cover;
 }
 
-@keyframes slide {
-    0% { opacity: 0; transform: scale(0.9); }
-    50% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(0.9); }
+@keyframes carouselAnimation {
+    0% {
+        opacity: 1;
+    }
+    16.66% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    66.66% {
+        opacity: 1;
+    }
+    83.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
 }
 
 .hero h2 {
-    font-size: 2.5em;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    color: #fff;
-    line-height: 1.5;
-    max-width: 600px;
+    font-size: 1.2rem;
 }
 
 /* About Section */
 .about-section {
-    background-color: #333;
-    color: white;
-    padding: 40px 20px;
-    text-align: right;
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: -20px;
 }
 
-.about-text h2 {
-    font-size
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+#services {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-category li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
