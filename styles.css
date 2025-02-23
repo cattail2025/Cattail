@@ -168,3 +168,49 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+/* New Blog Section Styles */
+.blog-section {
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333;
+    padding: 80px 0;
+}
+
+.blog-section h2 {
+    font-family: 'Poppins', sans-serif; /* Use the font from HTML */
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.blog-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.blog-section img {
+    width: 250px;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container */
+.blog-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Text Container */
+.blog-text-container {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
