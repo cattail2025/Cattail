@@ -65,52 +65,6 @@
         .huge-reservation-button:hover {
             background-color: #feb47b;
         }
-
-        /* Service Card Styling */
-        .service-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px;
-            background-color: #fff;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: scale(1.05);
-        }
-
-        .service-card img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            color: #777;
-        }
-
-        .card-details {
-            display: none;
-            font-size: 14px;
-            color: #555;
-            text-align: center;
-        }
-
-        .service-card.active .card-details {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -170,28 +124,6 @@
         </div>
     </section>
 
-    <!-- New Service Cards Section -->
-    <section id="services-cards" class="services-cards-section" data-aos="fade-up">
-        <h2>サービスカード</h2>
-        <div class="service-card" onclick="this.classList.toggle('active')">
-            <img src="women.jpg" alt="Women Service">
-            <h3>土曜日の女性用サービス</h3>
-            <p>土曜日は女性専用の日！リラックスしてお過ごしください。</p>
-            <div class="card-details">
-                <p>土曜日はあなたのための特別な時間。リラックスして、最高の美容サービスをお楽しみください。</p>
-            </div>
-        </div>
-
-        <div class="service-card" onclick="this.classList.toggle('active')">
-            <img src="men.jpg" alt="Men Service">
-            <h3>メンズサービス</h3>
-            <p>男性のためのプロフェッショナルなカットやカラー。</p>
-            <div class="card-details">
-                <p>あなたに最適なヘアスタイルを提供します。忙しい日々を忘れ、リフレッシュしてください。</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Extra Huge Reservation Button -->
     <div style="text-align: center; margin-top: 40px;">
         <a href="https://beauty.hotpepper.jp/slnH000743903/" class="huge-reservation-button">
@@ -213,52 +145,57 @@
                     <li>【レディース限定】カラー+補修トリートメント】- ¥4,500</li>
                     <li>【レディース限定】オーガニックハーブカラー+補修トリートメント】 - ¥4,500</li>
                     <li>【白髪染め + 補修トリートメント】 - ¥4,500</li>
-                    <li>【リタッチカラー】 - ¥3,800</li>
-                    <li>【シャンプー+セット】 - ¥2,500</li>
+                    <li>【リタッチカラー - ¥3,800</li>
+                    <li>【クイックトリートメント - ¥1,200</li>
+                    <li>【レディース限定】※初回限定　お顔剃り+お顔仕上げ - ¥3,300</li>
+                    <li>【レディース限定】お顔剃り+お顔仕上げ+えり剃り - ¥4,500</li>
+                    <li>【お顔マッサージ & パック - ¥2,500</li>
                 </ul>
             </div>
-
             <div class="service-category">
                 <h3>メンズ</h3>
                 <ul>
-                    <li>【メンズカット】 - ¥3,800</li>
-                    <li>【メンズカラー】 - ¥4,000</li>
-                    <li>【顔そり】 - ¥1,800</li>
-                    <li>【眉カット】 - ¥1,000</li>
-                    <li>【カット+カラー】 - ¥5,500</li>
+                    <li>【カット（シャンプー・ドライ込）】 - ¥2,900</li>
+                    <li>【メンズ限定】基本セットメニュー ¥3,600</li>
+                    <li>【メンズ限定】基本セットメニュー+頭皮毛穴クレンジング - ¥5,100</li>
+                    <li>【メンズ限定】白髪染め+基本セットメニュー - ¥6,400</li>
+                    <li>【メンズ限定】カラー+基本セットメニュー - ¥6,900</li>
+                    <li>【メンズ限定】グレーカラー（ぼかし）+基本セットメニュー - ¥5,900</li>
+                    <li>【カット（顔・えり剃り込）】 - ¥3,000</li>
+                    <li>【グレーカラー（ぼかし）】 - ¥2,900</li>
+                    <li>【メンズ限定】白髪染め+基本セットメニュー 】- ¥6,400</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Contact Form Section with Yellow Div -->
+    <section id="contact" data-aos="fade-up">
         <h2>お問い合わせ</h2>
         <div class="yellow-div">
-            <p>お気軽にお問い合わせください。</p>
-            <p>電話番号: <a href="tel:03-6231-2055">03-6231-2055</a></p>
-            <p>Email: <a href="mailto:cattail.kameari@gmail.com">cattail.kameari@gmail.com</a></p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><strong>電話番号:</strong> 03-6231-2055</p>
+                    <p><strong>メール:</strong> cattail.kameari@gmail.com</p>
+                    <p><strong>予約リンク:</strong> <a href="https://beauty.hotpepper.jp/slnH000743903/" target="_blank">ここから予約</a></p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Cat Tail ヘアサロン. All rights reserved.</p>
-    </footer>
+    <!-- Map Section -->
+    <section id="map" style="margin-top: 40px; text-align: center;">
+        <h2>サロンの場所</h2>
+        <iframe src="https://maps.google.com/maps?width=100%25&height=500&hl=en&q=Cat%20Tail%20ヘアサロン%20Kameari%20Tokyo+(Cat%20Tail%20ヘアサロン)&t=&z=14&ie=UTF8&iwloc=B&output=embed" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
 
-    <!-- AOS Script -->
+    <!-- AOS and Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init();
-
-        // Carousel functionality (add image rotation)
-        const carouselImages = document.querySelector('.carousel-images');
-        let currentImageIndex = 0;
-        
-        setInterval(() => {
-            currentImageIndex = (currentImageIndex + 1) % carouselImages.children.length;
-            carouselImages.style.transform = `translateX(-${currentImageIndex * 100}%)`;
-        }, 3000);
+        AOS.init({
+            duration: 1200, // Animation duration
+        });
     </script>
+
 </body>
 </html>
