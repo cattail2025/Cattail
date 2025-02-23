@@ -37,70 +37,6 @@
                 transform: translate3d(50px, 50px, 50px);
             }
         }
-
-        /* Media Queries for Responsiveness */
-
-        /* General styling for smaller screens like mobile */
-        @media only screen and (max-width: 768px) {
-            body {
-                font-size: 14px; /* Adjust text size for smaller screens */
-            }
-
-            header .logo {
-                font-size: 1.5rem; /* Smaller logo font for mobile */
-            }
-
-            nav ul {
-                text-align: center; /* Center navigation links */
-            }
-
-            .carousel-image {
-                width: 100%; /* Ensure images fit the screen size */
-                height: auto;
-            }
-
-            .hero {
-                padding-top: 80px; /* Adjust hero section padding for mobile */
-            }
-
-            .service-container {
-                flex-direction: column; /* Stack services vertically on small screens */
-                align-items: center; /* Center items */
-            }
-
-            .service-category ul {
-                padding-left: 0;
-                text-align: center;
-            }
-
-            footer {
-                font-size: 0.9rem; /* Slightly smaller footer text */
-            }
-        }
-
-        /* For very small screens like older iPhones */
-        @media only screen and (max-width: 480px) {
-            .hero h2 {
-                font-size: 1.5rem; /* Adjust hero text size for small devices */
-            }
-
-            .about-text p {
-                font-size: 1rem; /* Adjust paragraph font size */
-            }
-
-            nav ul li {
-                margin-left: 15px; /* Reduce space between menu items */
-            }
-        }
-
-        /* Fixed header adjustment for mobile */
-        header {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            background-color: #fff;
-        }
     </style>
 </head>
 <body>
@@ -183,4 +119,28 @@
     <section id="contact" data-aos="fade-up">
         <h2>お問い合わせ</h2>
         <p>ご予約やお問い合わせは、以下の方法でお気軽にご連絡ください。</p>
-       
+        <ul>
+            <li>電話: 03-6231-2055</li>
+            <li>メール: cattail.kameari@gmail.com</li>
+            <li>予約リンク: <a href="https://beauty.hotpepper.jp/slnH000743903/">予約リンク</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/cattail2025?igsh=MTdobWt5em53bGhsNw==">Instagram</a></li>
+            <li>Google Map: <a href="https://maps.app.goo.gl/Gxbi22xAgJCziVRw8">Google Map</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Cat Tail ヘアサロン | 全ての権利を保有</p>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true // Run animation only once
+        });
+    </script>
+</body>
+</html>
