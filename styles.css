@@ -91,13 +91,6 @@ nav ul li a {
     }
 }
 
-/* Adjusting Hero Text */
-.hero h2, .hero p {
-    position: relative;
-    z-index: 1; /* Ensure the text stays on top of the images */
-    margin-top: 150px; /* Adjust this value to move the text lower */
-}
-
 /* About Section */
 #about {
     background-color: black;
