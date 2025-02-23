@@ -65,6 +65,48 @@
         .huge-reservation-button:hover {
             background-color: #feb47b;
         }
+
+        /* Interactive Service Cards */
+        .service-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .service-card {
+            width: 250px;
+            height: 300px;
+            background-color: #ff7e5f;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .service-card:hover {
+            transform: scale(1.1);
+            background-color: #feb47b;
+        }
+
+        .service-card.active {
+            transform: scale(1.5);
+            background-color: #feb47b;
+        }
     </style>
 </head>
 <body>
@@ -160,40 +202,40 @@
                     <li>【メンズ限定】基本セットメニュー+頭皮毛穴クレンジング - ¥5,100</li>
                     <li>【メンズ限定】白髪染め+基本セットメニュー - ¥6,400</li>
                     <li>【メンズ限定】カラー+基本セットメニュー - ¥6,900</li>
-                    <li>【メンズ限定】グレーカラー（ぼかし）+基本セットメニュー - ¥5,900</li>
-                    <li>【カット（顔・えり剃り込）】 - ¥3,000</li>
-                    <li>【グレーカラー（ぼかし）】 - ¥2,900</li>
-                    <li>【メンズ限定】白髪染め+基本セットメニュー 】- ¥6,400</li>
+                    <li>【メンズ限定】グレーカラー（白髪染め）- ¥4,500</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section with Yellow Div -->
-    <section id="contact" data-aos="fade-up">
-        <h2>お問い合わせ</h2>
-        <div class="yellow-div">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p><strong>電話番号:</strong> 03-6231-2055</p>
-                    <p><strong>メール:</strong> cattail.kameari@gmail.com</p>
-                    <p><strong>予約リンク:</strong> <a href="https://beauty.hotpepper.jp/slnH000743903/" target="_blank">ここから予約</a></p>
-                </div>
-            </div>
+    <!-- Google Map Section -->
+    <section id="map" class="map-section">
+        <h2>店舗の場所</h2>
+        <div class="google-map">
+            <iframe src="https://maps.app.goo.gl/Gxbi22xAgJCziVRw8" width="100%" height="400" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section id="map" style="margin-top: 40px; text-align: center;">
-        <h2>サロンの場所</h2>
-        <iframe src="https://maps.google.com/maps?width=100%25&height=500&hl=en&q=Cat%20Tail%20ヘアサロン%20Kameari%20Tokyo+(Cat%20Tail%20ヘアサロン)&t=&z=14&ie=UTF8&iwloc=B&output=embed" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>お問い合わせ</h2>
+        <div class="yellow-div">
+            <p>電話でのお問い合わせは、<strong>03-6231-2055</strong> までご連絡ください。</p>
+        </div>
     </section>
 
-    <!-- AOS and Scripts -->
+    <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1200, // Animation duration
+        AOS.init();
+    </script>
+
+    <!-- Service Cards Script -->
+    <script>
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('active');
+            });
         });
     </script>
 
