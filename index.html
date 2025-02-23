@@ -65,40 +65,6 @@
         .huge-reservation-button:hover {
             background-color: #feb47b;
         }
-
-        /* Service Card Styling */
-        .service-cards {
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .service-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            color: #666;
-        }
     </style>
 </head>
 <body>
@@ -146,19 +112,29 @@
         </div>
     </section>
 
-    <!-- Service Cards Section Added Before Blog -->
-    <section id="service-cards" class="service-cards" data-aos="fade-up">
-        <div class="service-card">
-            <h3>カット & スタイリング</h3>
-            <p>髪の毛のカットとスタイリングを、あなたのスタイルに合わせて提供します。</p>
-        </div>
-        <div class="service-card">
-            <h3>カラーリング</h3>
-            <p>髪の色をお好みのトーンに合わせてカラーリングします。</p>
-        </div>
-        <div class="service-card">
-            <h3>トリートメント</h3>
-            <p>髪の健康を守るために、髪質に合わせたトリートメントを提供します。</p>
+    <!-- Service Cards Section (Placed before Blog) -->
+    <section id="service-cards" data-aos="fade-up">
+        <div class="card-container">
+            <!-- First Card -->
+            <div class="card">
+                <h3>女性理容師の20年技術で</h3>
+                <p>高級サロン以上のVIP体験をお手頃価格で、土曜日の予約は電話のみ</p>
+                <a href="https://beauty.hotpepper.jp/slnH000743903/" class="card-cta">予約はこちら</a>
+            </div>
+
+            <!-- Second Card -->
+            <div class="card">
+                <h3>なぜCat Tailを選ぶのか</h3>
+                <p>20年以上の経験を持つ女性が提供する最高のサービスを、予約は電話のみ</p>
+                <a href="https://beauty.hotpepper.jp/slnH000743903/" class="card-cta">予約はこちら</a>
+            </div>
+
+            <!-- Third Card -->
+            <div class="card">
+                <h3>男性専用VIP体験</h3>
+                <p>理想のスタイルサポート贅沢なリラックス空間で変身。Cat Tailは信頼を築く。今予約</p>
+                <a href="https://beauty.hotpepper.jp/slnH000743903/" class="card-cta">予約はこちら</a>
+            </div>
         </div>
     </section>
 
@@ -196,49 +172,26 @@
                     <li>【レディース限定】オーガニックハーブカラー+補修トリートメント】 - ¥4,500</li>
                     <li>【白髪染め + 補修トリートメント】 - ¥4,500</li>
                     <li>【リタッチカラー - ¥3,800</li>
-                    <li>【クイックトリートメント - ¥1,200</li>
-                    <li>【レディース限定】※初回限定　お顔剃り+お顔仕上げ - ¥3,300</li>
-                    <li>【レディース限定】お顔剃り+お顔仕上げ+えり剃り - ¥4,500</li>
-                    <li>【お顔マッサージ & パック - ¥2,500</li>
-                </ul>
-            </div>
-            <div class="service-category">
-                <h3>メンズ</h3>
-                <ul>
-                    <li>【カット（シャンプー・ドライ込）】 - ¥2,900</li>
-                    <li>【メンズ限定】基本セットメニュー ¥3,600</li>
-                    <li>【メンズ限定】基本セットメニュー+頭皮毛穴クレンジング - ¥5,100</li>
-                    <li>【メンズ限定】白髪染め+基本セットメニュー - ¥6,400</li>
-                    <li>【メンズ限定】カラー+基本セットメニュー - ¥6,900</li>
-                    <li>【メンズ限定】グレーカラー（ぼかし）+基本セットメニュー - ¥5,900</li>
-                    <li>【カット（顔・えり剃り込）】 - ¥3,000</li>
-                    <li>【グレーカラー（ぼかし）】 - ¥2,900</li>
-                    <li>【メンズ限定】白髪染め+基本セットメニュー 】- ¥6,400</li>
+                    <li>【クイックトリートメント】 - ¥2,200</li>
+                    <li>【リラックスヘッドスパ】 - ¥2,000</li>
+                    <li>【シャンプー&ブロー】 - ¥2,000</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section with Yellow Div -->
-    <section id="contact" data-aos="fade-up">
-        <h2>お問い合わせ</h2>
-        <div class="yellow-div">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p><strong>電話番号:</strong> 03-6231-2055</p>
-                    <p><strong>メール:</strong> cattail.kameari@gmail.com</p>
-                    <p><strong>予約リンク:</strong> <a href="https://beauty.hotpepper.jp/slnH000743903/" target="_blank">ここから予約</a></p>
-                </div>
-            </div>
+    <!-- Google Map Section (Restored to original size) -->
+    <section id="map" style="padding: 40px 0;">
+        <h2>地図</h2>
+        <div style="width: 100%; height: 500px;">
+            <iframe src="https://maps.google.com/maps?q=Kameari&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" width="100%" height="100%" style="border:0;"></iframe>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section id="map" style="margin-top: 40px; text-align: center;">
-        <h2>サロンの場所</h2>
-        <iframe src="https://maps.google.com/maps?width=600&height=450&hl=en&q=Kameari, Tokyo%20Japan&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Cat Tail ヘアサロン. All rights reserved.</p>
+    </footer>
 
     <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
