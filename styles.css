@@ -50,7 +50,7 @@ nav ul li a {
     font-size: 1.1rem;
 }
 
-/* Hero Section (Image Carousel) */
+/* Hero Section (Image Carousel with 3D effect) */
 .hero {
     padding-top: 100px; /* Increased padding */
     text-align: center;
@@ -58,6 +58,22 @@ nav ul li a {
     height: 750px; /* Increased height */
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    perspective: 1000px; /* Set perspective for 3D effect */
+}
+
+/* 3D Moving Background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('your-image.jpg') no-repeat center center/cover; /* Replace with your background image */
+    transform: translateZ(-1px) scale(1.5); /* Apply 3D effect */
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* Hero Text */
