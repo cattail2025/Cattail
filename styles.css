@@ -1,4 +1,4 @@
-/* General Reset and Styling */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,247 +7,155 @@
 
 body {
     font-family: Arial, sans-serif;
-}
-
-/* Hero Section with Image Carousel */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-    background: linear-gradient(to bottom right, #4CAF50, #9C27B0); /* Green and purple gradient background */
-}
-
-.carousel {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    animation: carousel 60s infinite; /* Adjust animation time for smooth transition */
-}
-
-.carousel-image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: fadeIn 60s infinite;
-}
-
-.carousel-image:nth-child(1) {
-    animation-delay: 0s;
-}
-.carousel-image:nth-child(2) {
-    animation-delay: 10s;
-}
-.carousel-image:nth-child(3) {
-    animation-delay: 20s;
-}
-.carousel-image:nth-child(4) {
-    animation-delay: 30s;
-}
-.carousel-image:nth-child(5) {
-    animation-delay: 40s;
-}
-.carousel-image:nth-child(6) {
-    animation-delay: 50s;
-}
-
-@keyframes carousel {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    16.66% {
-        transform: translateX(-100%);
-    }
-    33.33% {
-        transform: translateX(-200%);
-    }
-    50% {
-        transform: translateX(-300%);
-    }
-    66.66% {
-        transform: translateX(-400%);
-    }
-    83.33% {
-        transform: translateX(-500%);
-    }
-}
-
-@keyframes fadeIn {
-    0%, 100% {
-        opacity: 0;
-    }
-    16.66%, 83.33% {
-        opacity: 1;
-    }
-}
-
-/* Heading and Paragraph */
-h2 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
+    line-height: 1.6;
+    background: linear-gradient(45deg, #4CAF50, #9C27B0); /* Green to Purple Gradient with a smooth mix */
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-}
-
-p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;
-    color: #fff;
-    z-index: 2;
 }
 
 /* Header Styles */
 header {
-    background-color: #333;
-    padding: 1rem;
+    padding: 20px;
+    background-color: #fff;
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
-    color: #fff;
     font-size: 2rem;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* About Section Styles */
-.about-section {
-    background-color: #f4f4f4;
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.about-text p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
 }
 
-/* Services Section */
-#services {
-    padding: 4rem 2rem;
-    background-color: #fff;
+/* Hero Section (Image Carousel) */
+.hero {
+    padding-top: 80px; /* To account for the fixed header */
+    text-align: center;
+    color: white;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: -1; /* Make sure carousel images are behind text */
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slide 18s infinite;
+}
+
+.carousel img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.carousel img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.carousel img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+.carousel img:nth-child(5) {
+    animation-delay: 12s;
+}
+
+.carousel img:nth-child(6) {
+    animation-delay: 15s;
+}
+
+@keyframes slide {
+    0%, 100% {
+        opacity: 0;
+    }
+    16%, 33% {
+        opacity: 1;
+    }
+}
+
+/* About Section */
+#about {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
     text-align: center;
 }
 
-#services h2 {
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* General Section Styling */
+section {
+    padding: 50px 20px;
+}
+
+#services h2, #contact h2 {
+    text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
 }
 
 .service-container {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.service-category {
-    width: 250px;
-    text-align: left;
-}
-
-.service-category h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .service-category ul {
     list-style: none;
+    padding: 0;
 }
 
-.service-category ul li {
-    margin-bottom: 0.5rem;
+.service-category li {
     font-size: 1.1rem;
-    color: #555;
+    margin: 10px 0;
 }
 
-/* Contact Section */
-#contact {
-    padding: 4rem 2rem;
-    background-color: #f4f4f4;
-    text-align: center;
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
 
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-#contact ul {
-    list-style: none;
-    font-size: 1.1rem;
-}
-
-#contact ul li {
-    margin-bottom: 1rem;
-}
-
-/* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Scroll Button Styling */
-.scroll-button {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.scroll-button:hover {
-    background-color: #45a049;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
 }
