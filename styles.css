@@ -53,6 +53,7 @@ nav ul li a {
     height: 500px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .carousel {
@@ -60,8 +61,7 @@ nav ul li a {
     width: 100%;
     height: 100%;
     display: flex;
-    overflow: hidden;
-    z-index: -1; /* Make sure carousel images are behind text */
+    transition: all 5s ease-in-out; /* Smooth transition for the images */
 }
 
 .carousel img {
@@ -69,7 +69,7 @@ nav ul li a {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: slide 18s infinite;
+    animation: slide 30s infinite; /* Infinite loop with a 30s duration */
 }
 
 .carousel img:nth-child(1) {
@@ -77,23 +77,23 @@ nav ul li a {
 }
 
 .carousel img:nth-child(2) {
-    animation-delay: 3s;
+    animation-delay: 5s;
 }
 
 .carousel img:nth-child(3) {
-    animation-delay: 6s;
+    animation-delay: 10s;
 }
 
 .carousel img:nth-child(4) {
-    animation-delay: 9s;
+    animation-delay: 15s;
 }
 
 .carousel img:nth-child(5) {
-    animation-delay: 12s;
+    animation-delay: 20s;
 }
 
 .carousel img:nth-child(6) {
-    animation-delay: 15s;
+    animation-delay: 25s;
 }
 
 @keyframes slide {
