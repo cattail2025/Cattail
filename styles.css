@@ -240,3 +240,24 @@ html {
 #contact .contact-info a:hover {
     text-decoration: underline;
 }
+
+/* Reservation Button */
+.reservation-text {
+    display: inline-block;
+    padding: 20px 40px; /* Increased padding for a larger button */
+    font-size: 2.5rem; /* Larger text size */
+    font-weight: bold;
+    background-color: #ff7e5f; /* A bright color for visibility */
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    margin-top: 30px;
+}
+
+.reservation-text:hover {
+    background-color: #feb47b; /* Hover color */
+    transform: scale(1.1); /* Slight grow effect on hover */
+}
