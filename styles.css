@@ -243,18 +243,21 @@ html {
 
 /* Reservation Button */
 .reservation-text {
-    display: inline-block;
-    padding: 20px 40px; /* Increased padding for a larger button */
-    font-size: 2.5rem; /* Larger text size */
+    display: block; /* Make it a block element to take full width if needed */
+    width: 80%; /* Set a large width, adjust as necessary */
+    max-width: 400px; /* Prevent it from being too wide */
+    padding: 30px 50px; /* Large padding for a bigger button */
+    font-size: 3rem; /* Huge text size */
     font-weight: bold;
-    background-color: #ff7e5f; /* A bright color for visibility */
+    background-color: #ff7e5f; /* Bright color for visibility */
     color: white;
     text-align: center;
     text-decoration: none; /* Remove underline */
     border-radius: 50px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for a 3D effect */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
-    margin-top: 30px;
+    margin: 40px auto; /* Center the button and add space */
+    cursor: pointer; /* Make it obvious it's clickable */
 }
 
 .reservation-text:hover {
