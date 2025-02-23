@@ -20,16 +20,21 @@ header {
     width: 100%;
     z-index: 100;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
     font-size: 2rem;
     color: #333;
+    margin-left: 20px;
 }
 
 nav ul {
     list-style: none;
     text-align: right;
+    margin-right: 20px;
 }
 
 nav ul li {
@@ -47,66 +52,69 @@ nav ul li a {
 
 /* Hero Section (Image Carousel) */
 .hero {
-    padding-top: 100px; /* Increased padding for more space */
+    padding-top: 100px; /* Increased padding */
     text-align: center;
     color: white;
+    height: 750px; /* Increased height */
     position: relative;
     z-index: 1;
-    height: 600px; /* Increased height to allow more space for text and images */
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+/* Hero Text */
+.hero-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
-
+/* Carousel Styles */
 .carousel {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 300px; /* Adjust the height to make it more visible */
-    margin: 30px 0; /* Space between the carousel and text */
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 
 .carousel-images {
     display: flex;
-    width: 600%; /* 6 images, so the total width will be 6 times the width of one image */
-    animation: slide 36s infinite;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .carousel-image {
-    width: 16.66%; /* Each image takes up 1/6 of the container */
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensure it fills the section */
+    opacity: 0;
+    position: absolute;
+    animation: slide 30s infinite;
 }
+
+.carousel-image:nth-child(1) { animation-delay: 0s; }
+.carousel-image:nth-child(2) { animation-delay: 5s; }
+.carousel-image:nth-child(3) { animation-delay: 10s; }
+.carousel-image:nth-child(4) { animation-delay: 15s; }
+.carousel-image:nth-child(5) { animation-delay: 20s; }
+.carousel-image:nth-child(6) { animation-delay: 25s; }
 
 @keyframes slide {
     0%, 100% {
-        transform: translateX(0);
+        opacity: 0;
     }
-    16.66% {
-        transform: translateX(-100%);
+    16.66%, 33% {
+        opacity: 1;
     }
-    33.33% {
-        transform: translateX(-200%);
-    }
-    50% {
-        transform: translateX(-300%);
-    }
-    66.66% {
-        transform: translateX(-400%);
-    }
-    83.33% {
-        transform: translateX(-500%);
-    }
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
 /* About Section */
@@ -114,12 +122,6 @@ nav ul li a {
     background-color: black;
     color: white;
     padding: 50px 0;
-    text-align: center;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
 }
 
 #about p {
@@ -129,17 +131,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* General Section Styling */
-section {
-    padding: 50px 20px;
-}
-
-#services h2, #contact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
+/* Services Section */
 .service-container {
     display: flex;
     justify-content: space-around;
@@ -156,11 +148,7 @@ section {
     margin: 10px 0;
 }
 
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -169,28 +157,7 @@ footer {
     font-size: 1rem;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    nav ul {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .carousel {
-        height: 200px; /* Adjusted for smaller screens */
-    }
-
-    .carousel-image {
-        height: 100%; /* Full height for images on smaller screens */
-    }
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
