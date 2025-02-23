@@ -47,47 +47,65 @@ nav ul li a {
 
 /* Hero Section (Image Carousel) */
 .hero {
-    padding-top: 80px; /* To account for the fixed header */
+    padding-top: 80px; /* Account for the fixed header */
     text-align: center;
     color: white;
-    height: 500px;
     position: relative;
     z-index: 1;
+    height: auto; /* Adjust height based on content */
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
 }
 
 .carousel {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 300px; /* Adjust the height based on your design */
+    margin: 30px 0; /* Space between the carousel and text */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
+}
+
+.carousel-images {
+    display: flex;
+    width: 600%; /* 6 images, so the total width will be 6 times the width of one image */
+    animation: slide 36s infinite;
 }
 
 .carousel-image {
-    width: 100%;
+    width: 16.66%; /* Each image takes up 1/6 of the container */
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    animation: slide 30s infinite;
-    opacity: 0;
 }
-
-.carousel-image:nth-child(1) { animation-delay: 0s; }
-.carousel-image:nth-child(2) { animation-delay: 5s; }
-.carousel-image:nth-child(3) { animation-delay: 10s; }
-.carousel-image:nth-child(4) { animation-delay: 15s; }
-.carousel-image:nth-child(5) { animation-delay: 20s; }
-.carousel-image:nth-child(6) { animation-delay: 25s; }
 
 @keyframes slide {
     0%, 100% {
-        opacity: 0;
+        transform: translateX(0);
     }
-    16.66%, 33% {
-        opacity: 1;
+    16.66% {
+        transform: translateX(-100%);
+    }
+    33.33% {
+        transform: translateX(-200%);
+    }
+    50% {
+        transform: translateX(-300%);
+    }
+    66.66% {
+        transform: translateX(-400%);
+    }
+    83.33% {
+        transform: translateX(-500%);
     }
 }
 
@@ -97,6 +115,11 @@ nav ul li a {
     color: white;
     padding: 50px 0;
     text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 #about p {
@@ -144,4 +167,30 @@ footer {
     background-color: #333;
     color: white;
     font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel {
+        height: 200px; /* Adjusted for smaller screens */
+    }
+
+    .carousel-image {
+        height: 100%; /* Full height for images on smaller screens */
+    }
 }
