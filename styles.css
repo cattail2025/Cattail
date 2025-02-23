@@ -1,138 +1,160 @@
-/* General Reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
+body {
     font-family: Arial, sans-serif;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden; /* To prevent horizontal scroll */
-    scroll-behavior: smooth; /* Smooth scrolling */
+    line-height: 1.6;
+    background: linear-gradient(45deg, #4CAF50, #9C27B0); /* Green to Purple Gradient with a smooth mix */
+    color: #fff;
 }
 
-/* Hero Section with Carousel */
+/* Header Styles */
+header {
+    padding: 20px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 2rem;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+/* Hero Section (Image Carousel) */
 .hero {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 80px; /* To account for the fixed header */
     text-align: center;
-    background: linear-gradient(180deg, rgba(0, 255, 0, 0.6), rgba(128, 0, 128, 0.6));
+    color: white;
+    height: 500px;
+    position: relative;
 }
 
 .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     width: 100%;
-    height: 80%; /* Adjust the height of the carousel */
-    position: relative;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
 }
 
-.carousel-image {
+.carousel img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: slide 24s infinite ease-in-out; /* Slower animation, infinite loop */
     opacity: 0;
-    position: absolute;
-    transition: opacity 1s;
+    animation: slide 18s infinite;
+}
+
+.carousel img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.carousel img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.carousel img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+.carousel img:nth-child(5) {
+    animation-delay: 12s;
+}
+
+.carousel img:nth-child(6) {
+    animation-delay: 15s;
 }
 
 @keyframes slide {
     0%, 100% {
         opacity: 0;
     }
-    10%, 90% {
+    16%, 33% {
         opacity: 1;
     }
 }
 
-.hero h2 {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    animation: fadeIn 3s ease-in-out;
-}
-
-.hero p {
-    color: white;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    animation: fadeIn 4s ease-in-out;
-}
-
 /* About Section */
-.about-section {
-    background-color: #222;
+#about {
+    background-color: black;
     color: white;
-    padding: 40px;
+    padding: 50px 0;
     text-align: center;
 }
 
-.about-text {
-    background: rgba(0, 0, 0, 0.7); /* Dark background for text */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.about-text p {
-    line-height: 1.6;
-    font-size: 1.1rem;
-    margin-top: 20px;
-}
-
-/* Navigation and Layout */
-nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-nav ul li {
-    list-style: none;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
+#about p {
     font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 20px;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffd700; /* Hover effect */
+/* General Section Styling */
+section {
+    padding: 50px 20px;
+}
+
+#services h2, #contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-category li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
 
 footer {
     text-align: center;
+    padding: 20px;
     background-color: #333;
     color: white;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    font-size: 1rem;
 }
 
-/* Scroll Adjustments */
-body {
-    padding-top: 10px; /* Add a little padding for the scroll */
-}
-
-/* Add this section to fix scrolling */
-section {
-    margin: 0 auto;
-    padding-top: 60px; /* Make space for navbar if needed */
-}
