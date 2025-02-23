@@ -72,6 +72,7 @@ nav ul li a {
     animation: slide 18s infinite;
 }
 
+/* Animation for carousel images */
 .carousel img:nth-child(1) {
     animation-delay: 0s;
 }
@@ -96,11 +97,12 @@ nav ul li a {
     animation-delay: 15s;
 }
 
+/* Adjust animation to show 2 images at a time and make it smooth */
 @keyframes slide {
-    0%, 16%, 33%, 50%, 66%, 83%, 100% {
+    0%, 16.66%, 33.33%, 50%, 66.66%, 83.33%, 100% {
         opacity: 0;
     }
-    8%, 25%, 42%, 58%, 75%, 92% {
+    8.33%, 25%, 41.66%, 58.33%, 75%, 91.66% {
         opacity: 1;
     }
 }
