@@ -214,3 +214,29 @@ html {
     max-width: 700px;
     margin: 0 auto;
 }
+
+/* Contact Section Yellow Div */
+#contact {
+    padding: 60px 20px;
+    background-color: #ffeb3b; /* Yellow background for the contact section */
+    color: #333;
+}
+
+#contact .contact-info {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#contact .contact-info p {
+    font-weight: bold;
+}
+
+#contact .contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact .contact-info a:hover {
+    text-decoration: underline;
+}
