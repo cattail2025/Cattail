@@ -247,7 +247,7 @@ html {
     padding: 20px 40px; /* Increase padding to make it bigger */
     font-size: 3rem; /* Make the text very large */
     font-weight: bold;
-    background-color: red !important; /* Set background to red */
+    background-color: red; /* Set background to red */
     color: white; /* White text for contrast */
     text-align: center;
     text-decoration: none; /* Remove underline */
@@ -261,4 +261,28 @@ html {
 .reservation-text:hover {
     background-color: darkred; /* Darker red on hover */
     transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Extra Huge Reservation Button */
+.huge-reservation-button {
+    display: block; /* Make it full-width */
+    width: 80%; /* Adjust width */
+    max-width: 600px; /* Prevent it from getting too wide */
+    padding: 30px 50px; /* Even bigger padding */
+    font-size: 4rem; /* Extra large font */
+    font-weight: bold;
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    margin: 50px auto; /* Add space and center it */
+    cursor: pointer;
+}
+
+.huge-reservation-button:hover {
+    background-color: darkred; /* Darker red on hover */
+    transform: scale(1.1); /* Zoom effect */
 }
