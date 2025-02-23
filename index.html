@@ -65,6 +65,40 @@
         .huge-reservation-button:hover {
             background-color: #feb47b;
         }
+
+        /* Service Card Styling */
+        .service-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -109,6 +143,22 @@
             <h2>当サロンについて</h2>
             <p>土曜日の女性用の予約は電話のみだけ</p>
             <p>Cat Tail は、男女問わず気軽に通える理容室を目指しています。お客様一人ひとりに寄り添い、理想のスタイルを実現するために、丁寧で質の高いカットやスタイリング、カラー、トリートメントを提供しています。リラックスできる快適な空間で、スチームシェービングを体験しながら、肌のケアとトーンアップも可能。さらに、待機中やリラックスしている間にご利用いただける<strong>無料の顧客専用Wi-Fi</strong>も完備しています。プロフェッショナルな技術で、ヘアスタイルだけでなく心までリフレッシュできるサロンタイムをお届けします。20年以上の経験を持つ女性理容師が、一人ひとりの髪質や骨格に合わせた施術を行い、あなたにぴったりのスタイルを提案します。平日は男女どちらもご利用いただけ、土曜日は女性専用の特別な空間をご用意。細やかなサービスと確かな技術で、あなたの魅力を最大限に引き出します。Cat Tailで新しい自分を発見し、最高のヘアスタイルを手に入れましょう。髪質やライフスタイルに合わせた提案を行い、日々のお手入れがしやすいスタイルを提供します。リラックスできる落ち着いた雰囲気の中で、心地よい時間をお過ごしください。お客様にとって特別な場所となるよう、細部までこだわり抜いたサービスを心がけています。Cat Tail で、自分に合ったスタイルを見つけ、日々の生活をより豊かにしましょう。</p>
+        </div>
+    </section>
+
+    <!-- Service Cards Section Added Before Blog -->
+    <section id="service-cards" class="service-cards" data-aos="fade-up">
+        <div class="service-card">
+            <h3>カット & スタイリング</h3>
+            <p>髪の毛のカットとスタイリングを、あなたのスタイルに合わせて提供します。</p>
+        </div>
+        <div class="service-card">
+            <h3>カラーリング</h3>
+            <p>髪の色をお好みのトーンに合わせてカラーリングします。</p>
+        </div>
+        <div class="service-card">
+            <h3>トリートメント</h3>
+            <p>髪の健康を守るために、髪質に合わせたトリートメントを提供します。</p>
         </div>
     </section>
 
@@ -186,16 +236,14 @@
     <!-- Map Section -->
     <section id="map" style="margin-top: 40px; text-align: center;">
         <h2>サロンの場所</h2>
-        <iframe src="https://maps.google.com/maps?width=100%25&height=500&hl=en&q=Cat%20Tail%20ヘアサロン%20Kameari%20Tokyo+(Cat%20Tail%20ヘアサロン)&t=&z=14&ie=UTF8&iwloc=B&output=embed" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://maps.google.com/maps?width=600&height=450&hl=en&q=Kameari, Tokyo%20Japan&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </section>
 
-    <!-- AOS and Scripts -->
+    <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1200, // Animation duration
-        });
+        AOS.init();
     </script>
-
 </body>
 </html>
