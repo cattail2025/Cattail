@@ -204,6 +204,16 @@
     AOS.init({
         duration: 1200, // Animation duration
     });
+
+    // Dark Mode Toggle Script
+    document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+    });
+
+    // Toggle Chat Window
+    document.querySelector(".chat-button").addEventListener("click", function() {
+        document.querySelector(".chat-window").classList.toggle("active");
+    });
 </script>
 
 <!-- Link to the external JS file -->
