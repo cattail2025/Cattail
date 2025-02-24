@@ -14,56 +14,30 @@
     <!-- Your existing styles.css link -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- 3D Background Effect CSS -->
+    <!-- Parallax CSS (Embedded) -->
     <style>
-        /* Fullscreen 3D Background */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ff7e5f, #feb47b);
-            z-index: -1; /* Ensure it's in the background */
-            animation: moveBackground 10s infinite alternate;
-        }
-
-        /* 3D movement effect */
-        @keyframes moveBackground {
-            0% {
-                transform: translate3d(0, 0, 0);
-            }
-            100% {
-                transform: translate3d(50px, 50px, 50px);
-            }
-        }
-
-        /* Yellow Div Styling for Contact Section */
-        .yellow-div {
-            background-color: yellow;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Extra Huge Reservation Button */
-        .huge-reservation-button {
-            display: inline-block;
-            background-color: #ff7e5f;
+        /* Parallax Scrolling */
+        .parallax {
+            background-image: url('your-image.jpg'); /* Add your background image here */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
-            padding: 20px 40px;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            text-align: center;
-            margin-top: 40px;
-            transition: background-color 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        
+        .parallax-text h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
-        .huge-reservation-button:hover {
-            background-color: #feb47b;
+        .parallax-text p {
+            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -109,6 +83,14 @@
             <h2>当サロンについて</h2>
             <p>土曜日の女性用の予約は電話のみだけ</p>
             <p>Cat Tail は、男女問わず気軽に通える理容室を目指しています。お客様一人ひとりに寄り添い、理想のスタイルを実現するために、丁寧で質の高いカットやスタイリング、カラー、トリートメントを提供しています。リラックスできる快適な空間で、スチームシェービングを体験しながら、肌のケアとトーンアップも可能。さらに、待機中やリラックスしている間にご利用いただける<strong>無料の顧客専用Wi-Fi</strong>も完備しています。プロフェッショナルな技術で、ヘアスタイルだけでなく心までリフレッシュできるサロンタイムをお届けします。20年以上の経験を持つ女性理容師が、一人ひとりの髪質や骨格に合わせた施術を行い、あなたにぴったりのスタイルを提案します。平日は男女どちらもご利用いただけ、土曜日は女性専用の特別な空間をご用意。細やかなサービスと確かな技術で、あなたの魅力を最大限に引き出します。Cat Tailで新しい自分を発見し、最高のヘアスタイルを手に入れましょう。髪質やライフスタイルに合わせた提案を行い、日々のお手入れがしやすいスタイルを提供します。リラックスできる落ち着いた雰囲気の中で、心地よい時間をお過ごしください。お客様にとって特別な場所となるよう、細部までこだわり抜いたサービスを心がけています。Cat Tail で、自分に合ったスタイルを見つけ、日々の生活をより豊かにしましょう。</p>
+        </div>
+    </section>
+
+    <!-- Parallax Scrolling Section -->
+    <section class="parallax">
+        <div class="parallax-text">
+            <h2>美しさと癒しの空間</h2>
+            <p>ここで最高の体験をお届けします</p>
         </div>
     </section>
 
@@ -196,25 +178,6 @@
             duration: 1200, // Animation duration
         });
     </script>
-
-    <!-- Link to the external JS file -->
-<script src="script.js"></script> 
-
-<!-- Parallax Scrolling Section -->
-<section class="parallax">
-    <div class="parallax-text">
-        <h2>美しさと癒しの空間</h2>
-        <p>ここで最高の体験をお届けします</p>
-    </div>
-</section>
-
-<!-- AOS and Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1200, // Animation duration
-    });
-</script>
 
 </body>
 </html>
