@@ -470,65 +470,52 @@ body.dark-mode {
     }
 }
 
-/* Family-Oriented Section */
+/* Basic Styles for Family-Oriented Section */
 #family-welcome {
     background-color: #e0f7fa; /* Light blue background */
-    padding: 50px 20px;
+    padding: 50px;
     text-align: center;
-    border-radius: 10px;
 }
 
 #family-welcome h2 {
-    font-size: 2.5rem;
-    color: #000000; /* Black color */
     font-family: 'Poppins', sans-serif;
-}
-
-#family-welcome p {
-    font-size: 1.2rem;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
+    color: #000;
 }
 
 #visitor-count {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 20px 0;
+    position: relative;
 }
 
 #visitor-number {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-right: 10px;
+    font-size: 3rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
 }
 
 #filling-bar {
-    width: 0;
+    width: 0%;
     height: 20px;
-    background-color: #4caf50; /* Blue filling bar */
+    background-color: #4caf50; /* Blue color for filling */
     transition: width 1s ease-in-out;
 }
 
 .cta-message {
-    font-size: 1.4rem;
-    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-top: 20px;
 }
 
 .reserve-button {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 20px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    margin-top: 20px;
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
 .reserve-button:hover {
     background-color: #0056b3;
 }
-
-
