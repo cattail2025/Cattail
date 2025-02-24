@@ -470,52 +470,9 @@ body.dark-mode {
     }
 }
 
-/* Basic Styles for Family-Oriented Section */
-#family-welcome {
-    background-color: #e0f7fa; /* Light blue background */
-    padding: 50px;
-    text-align: center;
-}
-
-#family-welcome h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #000;
-}
-
-#visitor-count {
-    margin: 20px 0;
-    position: relative;
-}
-
-#visitor-number {
-    font-size: 3rem;
-    color: #333;
-    font-family: 'Poppins', sans-serif;
-}
-
 #filling-bar {
     width: 0%;
     height: 20px;
-    background-color: #4caf50; /* Blue color for filling */
-    transition: width 1s ease-in-out;
-}
-
-.cta-message {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    margin-top: 20px;
-}
-
-.reserve-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-.reserve-button:hover {
-    background-color: #0056b3;
+    background-color: #4caf50; /* Green color for the filling */
+    transition: width 1s ease-in-out; /* Smooth transition */
 }
