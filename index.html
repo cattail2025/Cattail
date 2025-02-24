@@ -75,15 +75,27 @@
     <!-- Header with enhanced "Cat Tail ヘアサロン" -->
     <header>
         <h1 class="logo">Cat Tail ヘアサロン</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="#home">ホーム</a></li>
                 <li><a href="#about">当サロンについて</a></li>
                 <li><a href="#services">サービス</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
+                <li><a href="https://beauty.hotpepper.jp/slnH000743903/">予約</a></li>
             </ul>
         </nav>
     </header>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
 
     <!-- Hero Section with Image Carousel -->
     <section id="home" class="hero" data-aos="fade-up">
@@ -190,15 +202,6 @@
     </section>
 
     <!-- Add more chat content here -->
-<!-- Dark Mode Toggle Button -->
-<button id="dark-mode-toggle">Toggle Dark Mode</button>
-
-<!-- AOS and Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1200, // Animation duration
-    });
 
     <!-- Dark Mode Toggle Button -->
 <button id="dark-mode-toggle">Toggle Dark Mode</button>
