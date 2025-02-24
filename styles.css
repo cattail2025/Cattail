@@ -549,53 +549,80 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
-/* Best Seller Section Styles */
 .best-seller-section {
-    padding: 40px 20px;
-    background-color: #f0f0f0;
-}
-
-.best-seller-gallery {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    justify-content: center;
-}
-
-.best-seller-card {
-    min-width: 250px;
-    border-radius: 10px;
-    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    background-color: #f4f4f4;
 }
 
-.best-seller-card img {
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.service-slider {
+    overflow-x: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 10px;
+}
+
+.service-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.service-container {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+}
+
+.service-card {
+    flex: 0 0 auto;
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img {
     width: 100%;
-    border-radius: 8px;
+    height: auto;
+    border-radius: 10px;
 }
 
-.best-seller-card h3 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333;
-}
-
-.best-seller-card p {
-    margin: 10px 0;
+.service-card h3 {
     font-size: 16px;
-    color: #666;
+    margin-top: 10px;
 }
 
-.best-seller-card a {
+.service-card p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.reserve-button {
     display: inline-block;
     margin-top: 10px;
-    font-size: 16px;
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
     text-decoration: none;
-    color: #007BFF;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.best-seller-card a:hover {
-    text-decoration: underline;
+.reserve-button:hover {
+    background-color: #ddd;
 }
-
