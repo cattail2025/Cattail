@@ -129,3 +129,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, 100); // Adjust speed by changing the interval time
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.querySelector('.best-seller-gallery');
+    let startX;
+
+    gallery.addEventListener('mousedown', (e) => {
+        startX = e.pageX - gallery.offsetLeft;
+        gallery.style.cursor = 'grabbing';
+    });
+
+    gallery.addEventListener('mouseleave', () => {
+        gallery.style.cursor = 'grab';
+    });
+
+    gallery.addEventListener('mouseup', () => {
+        gallery.style.cursor = 'grab';
+    });
+
+    gallery.addEventListener('mousemove', (e) => {
+        if (startX) {
+            const x = e.pageX - gallery.offsetLeft;
+            const walk = (x - startX) * 2; // Adjust the swipe speed here
+            gallery.scrollLeft = gallery.scrollLeft - walk;
+            startX = x;
+        }
+    });
+
+    gallery.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - gallery.offsetLeft;
+    });
+
+    gallery.addEventListener('touchmove', (e) => {
+        if (startX) {
+            const x = e.touches[0].pageX - gallery.offsetLeft;
+            const walk = (x - startX) * 2; // Adjust swipe speed here as well
+            gallery.scrollLeft = gallery.scrollLeft - walk;
+            startX = x;
+        }
+    });
+});
