@@ -131,48 +131,50 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".best-seller-container");
+    const slider = document.querySelector(".service-slider");
+    const container = document.querySelector(".service-container");
     let isDown = false;
     let startX;
     let scrollLeft;
 
-    container.addEventListener("mousedown", (e) => {
+    slider.addEventListener("mousedown", (e) => {
         isDown = true;
-        container.classList.add("active");
-        startX = e.pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
     });
 
-    container.addEventListener("mouseleave", () => {
+    slider.addEventListener("mouseleave", () => {
         isDown = false;
-        container.classList.remove("active");
+        slider.classList.remove("active");
     });
 
-    container.addEventListener("mouseup", () => {
+    slider.addEventListener("mouseup", () => {
         isDown = false;
-        container.classList.remove("active");
+        slider.classList.remove("active");
     });
 
-    container.addEventListener("mousemove", (e) => {
+    slider.addEventListener("mousemove", (e) => {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust speed
-        container.scrollLeft = scrollLeft - walk;
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
     });
 
-    // Mobile Touch Support
-    let touchStartX = 0;
-    let touchScrollLeft = 0;
+    // Touch support
+    let touchStartX;
+    let touchScrollLeft;
 
-    container.addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].pageX;
-        touchScrollLeft = container.scrollLeft;
+    slider.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchScrollLeft = slider.scrollLeft;
     });
 
-    container.addEventListener("touchmove", (e) => {
-        const touchMoveX = e.touches[0].pageX;
-        const walk = (touchMoveX - touchStartX) * 2; // Adjust speed
-        container.scrollLeft = touchScrollLeft - walk;
+    slider.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+        const touchX = e.touches[0].clientX;
+        const walk = (touchX - touchStartX) * 2;
+        slider.scrollLeft = touchScrollLeft - walk;
     });
 });
