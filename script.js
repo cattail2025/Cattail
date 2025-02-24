@@ -116,31 +116,39 @@ function toggleMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM loaded, starting animations!');
     const visitorNumber = document.getElementById('visitor-number');
     const fillingBar = document.getElementById('filling-bar');
 
-    // Number animation from 0 to 30
+    // Add a simple console log to see if it's accessed properly
+    if (!visitorNumber || !fillingBar) {
+        console.error("Element not found!");
+        return;
+    }
+
+    // Number animation
     let currentNumber = 0;
     const targetNumber = 30;
-    const numberInterval = setInterval(function() {
+    const numberInterval = setInterval(function () {
         if (currentNumber < targetNumber) {
             currentNumber++;
-            visitorNumber.textContent = `${currentNumber}人`; // Number with "人"
+            visitorNumber.textContent = `${currentNumber}人`;
+            console.log(currentNumber);
         } else {
             clearInterval(numberInterval);
         }
-    }, 100); // Adjust speed by changing the interval time
+    }, 100);
 
-    // Filling bar animation from 0% to 90%
+    // Bar filling animation
     let currentWidth = 0;
     const targetWidth = 90;
-    const widthInterval = setInterval(function() {
+    const widthInterval = setInterval(function () {
         if (currentWidth < targetWidth) {
             currentWidth++;
             fillingBar.style.width = currentWidth + '%';
+            console.log(`Bar width: ${currentWidth}%`);
         } else {
             clearInterval(widthInterval);
         }
-    }, 60); // Adjust speed by changing the interval time
+    }, 60);
 });
-
