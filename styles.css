@@ -286,29 +286,3 @@ html {
     background-color: darkred; /* Darker red on hover */
     transform: scale(1.1); /* Zoom effect */
 }
-
-/* Parallax Section */
-.parallax {
-    background-image: url('your-image.jpg');
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax-text {
-    text-align: center;
-    padding: 50px;
-    color: white;
-    font-size: 2rem; /* Adjustable font size */
-    font-weight: bold; /* Bold for better readability */
-}
-
-/* Add some responsiveness */
-@media (max-width: 768px) {
-    .parallax-text {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-        padding: 30px; /* Reduce padding on smaller screens */
-    }
-}
