@@ -360,9 +360,7 @@ body.dark-mode {
     font-size: 16px;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
+/* Dark Mode Button Hover */
+.dark-mode-toggle:hover {
+    background-color: #555;
 }
-
