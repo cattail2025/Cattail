@@ -286,3 +286,17 @@ html {
     background-color: darkred; /* Darker red on hover */
     transform: scale(1.1); /* Zoom effect */
 }
+.parallax {
+    background-image: url('your-image.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-text {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
