@@ -367,7 +367,7 @@ body.dark-mode {
 
 /* Styling for the Promo Banner */
 .promo-banner {
-    display: none; /* Hidden initially */
+    display: none !important; /* Forcefully hide the banner initially */
     position: fixed;
     top: 10px;
     left: 50%;
@@ -398,5 +398,3 @@ body.dark-mode {
     right: 10px;
     font-weight: bold;
 }
-
-
