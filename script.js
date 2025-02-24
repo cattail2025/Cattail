@@ -97,3 +97,21 @@ darkModeToggle.addEventListener("click", () => {
     }
 });
 
+// Hamburger Menu Toggle
+function toggleMenu() {
+    const menu = document.querySelector('.nav-menu');
+    const toggleButton = document.querySelector('.menu-toggle');
+
+    menu.classList.toggle('active');
+    toggleButton.classList.toggle('active');
+
+    // Adding smooth transition to the menu visibility
+    if (menu.classList.contains('active')) {
+        menu.style.transition = "transform 0.3s ease-in-out";  // Smooth sliding effect
+        menu.style.transform = "translateX(0)"; // Slide in
+    } else {
+        menu.style.transition = "transform 0.3s ease-in-out"; // Smooth sliding effect
+        menu.style.transform = "translateX(100%)"; // Slide out
+    }
+}
+
