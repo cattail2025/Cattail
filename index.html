@@ -65,6 +65,23 @@
         .huge-reservation-button:hover {
             background-color: #feb47b;
         }
+
+        /* Service Card Details */
+        .service-card-details {
+            display: none; /* Hide the details by default */
+            padding: 10px;
+            background-color: #f8f8f8;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        .service-card-summary {
+            cursor: pointer; /* Makes the summary text clickable */
+        }
+
+        .service-card-summary:hover {
+            text-decoration: underline; /* Adds hover effect */
+        }
     </style>
 </head>
 <body>
@@ -112,41 +129,38 @@
         </div>
     </section>
 
-    <!-- Service Cards Section (added before the Blog section) -->
+    <!-- Service Cards Section (with toggleable details) -->
     <section id="service-cards" data-aos="fade-up">
         <div class="service-card-container">
             <!-- 1st Card -->
             <div class="service-card">
                 <h3>女性理容師の20年技術で</h3>
-                <p>高級サロン以上のVIP体験をお手頃価格で、土曜日の予約は電話のみ</p>
+                <p class="service-card-summary">高級サロン以上のVIP体験をお手頃価格で、土曜日の予約は電話のみ</p>
+                <div class="service-card-details">
+                    <p>詳細情報: さらに多くの特典とサービスについてはこちらでご確認いただけます...</p>
+                </div>
                 <a href="#" class="cta-button">今すぐ予約</a>
             </div>
 
             <!-- 2nd Card -->
             <div class="service-card">
                 <h3>なぜCat Tailを選ぶのか</h3>
-                <p>20年以上の経験を持つ女性が提供する最高のサービスを、予約は電話のみ</p>
+                <p class="service-card-summary">20年以上の経験を持つ女性が提供する最高のサービスを、予約は電話のみ</p>
+                <div class="service-card-details">
+                    <p>詳細情報: 私たちの専門家がどのようにお客様に完璧なヘアスタイルを提供するのか、こちらでご確認ください...</p>
+                </div>
                 <a href="#" class="cta-button">今すぐ予約</a>
             </div>
 
             <!-- 3rd Card -->
             <div class="service-card">
                 <h3>男性専用VIP体験</h3>
-                <p>理想のスタイルサポート贅沢なリラックス空間で変身Cat Tailは信頼を築く今予約</p>
+                <p class="service-card-summary">理想のスタイルサポート贅沢なリラックス空間で変身Cat Tailは信頼を築く今予約</p>
+                <div class="service-card-details">
+                    <p>詳細情報: 特別な男性専用のリラックス体験を提供し、最適なスタイルを提供します...</p>
+                </div>
                 <a href="#" class="cta-button">今すぐ予約</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Owner's Blog Section -->
-    <section id="owner-blog" class="blog-section" style="background-color: #f8f8f8; padding: 40px 20px;" data-aos="fade-up">
-        <div class="blog-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2>真弓 - サロンオーナーからのご挨拶</h2>
-            <p>こんにちは、Cat Tail ヘアサロンのオーナー、早川真弓です。Cat Tail はユニセックスサロンで、理容室として20年以上の経験を活かし、皆様にリラックスできる空間と、最高のスタイルを提供しています。お客様一人ひとりの魅力を引き出すお手伝いができることが、私の喜びです。</p>
-            <p>日々の忙しさを忘れ、ゆったりとした時間をお過ごしください。お待ちしています♪</p>
-        </div>
-        <div class="blog-image" style="text-align: center; margin-top: 20px;">
-            <img src="owner.jpg" alt="オーナー 早川真弓" style="max-width: 100%; height: auto; border-radius: 8px;"/>
         </div>
     </section>
 
@@ -161,61 +175,38 @@
     <section id="services" data-aos="fade-right">
         <h2>サービス</h2>
         <div class="service-container">
-            <div class="service-category">
-                <h3>レディース</h3>
-                <ul>
-                    <li>【カット（シャンプー・ブロー込）】 - ¥4,400</li>
-                    <li>【レディース限定】スチームシェービング基本セットメニュー（カット別）- ¥5,500</li>
-                    <li>【レディース限定】カット+カラー - ¥6,300</li>
-                    <li>【前髪カット】 - ¥1,100</li>
-                    <li>【レディース限定】カラー+補修トリートメント】- ¥4,500</li>
-                    <li>【レディース限定】オーガニックハーブカラー+補修トリートメント】 - ¥4,500</li>
-                    <li>【白髪染め + 補修トリートメント】 - ¥4,500</li>
-                    <li>【リタッチカラー - ¥3,800</li>
-                    <li>【クイックトリートメント - ¥1,200</li>
-                    <li>【レディース限定】※初回限定　お顔剃り+お顔仕上げ - ¥3,300</li>
-                    <li>【レディース限定】お顔剃り+お顔仕上げ+えり剃り - ¥4,500</li>
-                    <li>【お顔マッサージ & パック - ¥2,500</li>
-                </ul>
-            </div>
-            <div class="service-category">
-                <h3>メンズ</h3>
-                <ul>
-                    <li>【カット（シャンプー・ドライ込）】 - ¥2,900</li>
-                    <li>【メンズ限定】基本セットメニュー ¥3,600</li>
-                    <li>【メンズ限定】基本セットメニュー+頭皮毛穴クレンジング - ¥5,100</li>
-                    <li>【メンズ限定】白髪染め+基本セットメニュー - ¥6,400</li>
-                    <li>【メンズ限定】カラー+基本セットメニュー - ¥6,900</li>
-                    <li>【メンズ限定】グレーカラー（ぼかし）+基本セットメニュー - ¥5,900</li>
-                    <li>【カット（顔・えり剃り込）】 - ¥3,000</li>
-                    <li>【グレーカラー（ぼかし）】 - ¥2,900</li>
-                    <li>【お顔剃り + 仕上げ - ¥1,800</li>
-                </ul>
-            </div>
+            <div class="service-item">カット</div>
+            <div class="service-item">カラー</div>
+            <div class="service-item">トリートメント</div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section" style="text-align: center;">
+    <section id="contact" class="yellow-div" data-aos="fade-up">
         <h2>お問い合わせ</h2>
-        <p>ご予約・お問い合わせはお電話または下記フォームからご連絡ください。</p>
-        <p>電話番号: <a href="tel:03-6231-2055">03-6231-2055</a></p>
-        <p>メール: <a href="mailto:cattail.kameari@gmail.com">cattail.kameari@gmail.com</a></p>
-    </section>
-
-    <!-- Google Map Section -->
-    <section id="map" class="map-section" style="width: 100%; height: 500px;">
-        <iframe
-            src="https://maps.app.goo.gl/Gxbi22xAgJCziVRw8"
-            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <p>お電話またはメールでご連絡ください。</p>
+        <p><strong>電話:</strong> 03-6231-2055</p>
+        <p><strong>メール:</strong> cattail.kameari@gmail.com</p>
+        <p><a href="https://maps.app.goo.gl/Gxbi22xAgJCziVRw8" target="_blank">Google Mapで確認</a></p>
     </section>
 
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-    <!-- Initialize AOS -->
     <script>
+        // Initialize AOS animation
         AOS.init();
+
+        // Toggle Service Card Details
+        const serviceCards = document.querySelectorAll('.service-card-summary');
+        serviceCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const details = this.nextElementSibling; // Get the associated details div
+                if (details.style.display === "none" || details.style.display === "") {
+                    details.style.display = "block"; // Show the details
+                } else {
+                    details.style.display = "none"; // Hide the details
+                }
+            });
+        });
     </script>
 </body>
 </html>
