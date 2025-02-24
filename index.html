@@ -195,6 +195,12 @@
     <!-- Add more chat content here -->
 </div>
 
+<!-- Promo Banner for Promotions -->
+<div id="promoBanner" class="promo-banner">
+    <p>🎉 特別オファー！ 🎉 初回訪問で5％オフ 今すぐお電話で予約 📞 03-6231-2055 または「今すぐ予約」をクリックしてください</p>
+    <button id="closeBanner" class="close-banner">X</button>
+</div>
+
 <!-- AOS and Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -213,6 +219,18 @@
     document.querySelector(".chat-button").addEventListener("click", function() {
         document.querySelector(".chat-window").classList.toggle("active");
     });
+
+    // Display the banner after 3 seconds
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('promoBanner').style.display = 'block';
+        }, 3000);  // 3-second delay before showing banner
+    };
+
+    // Close the banner when the "X" button is clicked
+    document.getElementById('closeBanner').onclick = function() {
+        document.getElementById('promoBanner').style.display = 'none';
+    };
 </script>
 
 <!-- Link to the external JS file -->
