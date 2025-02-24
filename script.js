@@ -115,7 +115,6 @@ function toggleMenu() {
     }
 }
 
-// Number Animation and Filling Bar
 document.addEventListener('DOMContentLoaded', function () {
     const visitorNumber = document.getElementById('visitor-number');
     const fillingBar = document.getElementById('filling-bar');
@@ -132,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 100);
 
-    // Animate the filling bar from 0 to 90% width
+    // Animate the filling bar from 0% to 90% width
     let currentWidth = 0;
     const targetWidth = 90; // You can adjust this as per your desired percentage
     const widthInterval = setInterval(function() {
