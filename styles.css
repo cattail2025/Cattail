@@ -461,3 +461,102 @@ body.dark-mode {
     }
 }
 
+/* General Section Styling */
+#family-welcome {
+    background-color: #f5f5f5;  /* Light background */
+    padding: 40px;
+    text-align: center;
+}
+
+/* Title */
+#family-welcome h2 {
+    font-family: 'Poppins', sans-serif;  /* Poppins font */
+    color: black;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph text */
+#family-welcome p {
+    font-family: 'Poppins', sans-serif;  /* Poppins font */
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Number Animation */
+#visitor-count {
+    font-family: 'Poppins', sans-serif;  /* Poppins font */
+    color: black;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#visitor-number {
+    font-weight: bold;
+    animation: numberAnimation 2s ease-in-out forwards;
+}
+
+/* Filling Bar */
+#filling-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;  /* Light gray background */
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#filling-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0; /* Initially no filling */
+    background-color: #007bff;  /* Blue color */
+    border-radius: 10px;
+    animation: fillAnimation 2s ease-in-out forwards;
+}
+
+/* Animation for filling bar */
+@keyframes fillAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%; /* You can adjust this width to match your desired filling level (for 30 customers) */
+    }
+}
+
+/* Number animation from 0 to 30 */
+@keyframes numberAnimation {
+    0% {
+        content: '0';
+    }
+    100% {
+        content: '30'; /* Final customer number */
+    }
+}
+
+/* Call to Action */
+.cta-message {
+    font-family: 'Poppins', sans-serif;  /* Poppins font */
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Reservation Button */
+.reserve-button {
+    font-family: 'Poppins', sans-serif;  /* Poppins font */
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;  /* Blue button */
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
