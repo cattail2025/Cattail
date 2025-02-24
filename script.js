@@ -119,21 +119,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const visitorNumber = document.getElementById('visitor-number');
     const fillingBar = document.getElementById('filling-bar');
 
-    // Animate number from 0 to 30
+    // Number animation from 0 to 30
     let currentNumber = 0;
     const targetNumber = 30;
     const numberInterval = setInterval(function() {
         if (currentNumber < targetNumber) {
             currentNumber++;
-            visitorNumber.textContent = `${currentNumber}人`;  // Display the number with "人" (person) in Japanese
+            visitorNumber.textContent = `${currentNumber}人`; // Number with "人"
         } else {
             clearInterval(numberInterval);
         }
     }, 100);
 
-    // Animate the filling bar from 0% to 90% width
+    // Filling bar animation from 0% to 90%
     let currentWidth = 0;
-    const targetWidth = 90; // You can adjust this as per your desired percentage
+    const targetWidth = 90;
     const widthInterval = setInterval(function() {
         if (currentWidth < targetWidth) {
             currentWidth++;
@@ -141,6 +141,5 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             clearInterval(widthInterval);
         }
-    }, 60); // Adjust speed by modifying interval time
+    }, 60); // Adjust speed by changing the interval time
 });
-
