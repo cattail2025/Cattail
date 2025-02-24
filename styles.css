@@ -617,10 +617,3 @@ body.dark-mode {
 .reserve-button:hover {
     background-color: #ddd;
 }
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .service-card {
-        width: 90%;
-    }
-}
