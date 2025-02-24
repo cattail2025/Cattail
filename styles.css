@@ -562,47 +562,38 @@ body.dark-mode {
 }
 
 .service-slider {
-    overflow-x: auto;
-    display: flex;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-bottom: 10px;
-}
-
-.service-slider::-webkit-scrollbar {
-    display: none;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .service-container {
     display: flex;
     gap: 15px;
     width: max-content;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
 }
 
 .service-card {
     flex: 0 0 auto;
-    width: 250px;
+    width: 280px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
     color: white;
     text-align: center;
     scroll-snap-align: center;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
 }
 
 .service-card img {
     width: 100%;
-    height: auto;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 .service-card h3 {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
 }
 
