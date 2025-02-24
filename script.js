@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             clearInterval(numberInterval);
         }
-    }, 100);
+    }, 100); // Adjust speed by changing the interval time
 
     // Filling bar animation from 0% to 90%
     let currentWidth = 0;
@@ -143,3 +143,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 60); // Adjust speed by changing the interval time
 });
+
