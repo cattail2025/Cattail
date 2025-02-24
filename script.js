@@ -100,13 +100,20 @@ darkModeToggle.addEventListener("click", () => {
 // Display the banner after 3 seconds
 window.onload = function() {
     setTimeout(function() {
-        document.getElementById('promoBanner').style.display = 'block';
+        let promoBanner = document.getElementById('promoBanner');
+        if (promoBanner) {
+            promoBanner.style.display = 'block'; // Show the banner
+        }
     }, 3000);  // 3-second delay before showing banner
-};
+}; // <-- This is the first closing `});` for window.onload
 
 // Close the banner when the "X" button is clicked
 document.getElementById('closeBanner').onclick = function() {
-    document.getElementById('promoBanner').style.display = 'none';
-};
+    let promoBanner = document.getElementById('promoBanner');
+    if (promoBanner) {
+        promoBanner.style.display = 'none'; // Hide the banner
+    }
+}; // <-- This is the second closing `});` for the onclick event
+
 
 
