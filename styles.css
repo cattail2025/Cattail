@@ -470,9 +470,81 @@ body.dark-mode {
     }
 }
 
+/* Family-Oriented Section */
+#family-welcome {
+  text-align: center;
+  background-color: #e0f7fa; /* Light blue background */
+  padding: 40px 0;
+}
+
+#visitor-count {
+  margin-top: 20px;
+  position: relative;
+}
+
 #filling-bar {
-    width: 0%;
-    height: 20px;
-    background-color: #4caf50; /* Green color for the filling */
-    transition: width 1s ease-in-out; /* Smooth transition */
+  width: 80%; /* Adjust based on your layout */
+  height: 20px;
+  background-color: #d1e9f1; /* Light background for progress bar */
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+#filling-bar::before {
+  content: "";
+  display: block;
+  width: 0; /* Starts at 0% */
+  height: 100%;
+  background-color: #007bff; /* Blue color */
+  animation: fillBar 5s forwards;
+  border-radius: 10px;
+}
+
+#visitor-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  animation: countUp 5s linear forwards;
+}
+
+/* Number animation (count up) */
+@keyframes countUp {
+  0% {
+    content: "0";
+  }
+  100% {
+    content: "28"; /* Target number */
+  }
+}
+
+/* Progress bar animation */
+@keyframes fillBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%; /* Target fill */
+  }
+}
+
+.cta-message {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #007bff;
+}
+
+.reserve-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.reserve-button:hover {
+  background-color: #0056b3;
 }
