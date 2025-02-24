@@ -130,42 +130,49 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 100); // Adjust speed by changing the interval time
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const gallery = document.querySelector('.best-seller-gallery');
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".best-seller-container");
+    let isDown = false;
     let startX;
+    let scrollLeft;
 
-    gallery.addEventListener('mousedown', (e) => {
-        startX = e.pageX - gallery.offsetLeft;
-        gallery.style.cursor = 'grabbing';
+    container.addEventListener("mousedown", (e) => {
+        isDown = true;
+        container.classList.add("active");
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
     });
 
-    gallery.addEventListener('mouseleave', () => {
-        gallery.style.cursor = 'grab';
+    container.addEventListener("mouseleave", () => {
+        isDown = false;
+        container.classList.remove("active");
     });
 
-    gallery.addEventListener('mouseup', () => {
-        gallery.style.cursor = 'grab';
+    container.addEventListener("mouseup", () => {
+        isDown = false;
+        container.classList.remove("active");
     });
 
-    gallery.addEventListener('mousemove', (e) => {
-        if (startX) {
-            const x = e.pageX - gallery.offsetLeft;
-            const walk = (x - startX) * 2; // Adjust the swipe speed here
-            gallery.scrollLeft = gallery.scrollLeft - walk;
-            startX = x;
-        }
+    container.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust speed
+        container.scrollLeft = scrollLeft - walk;
     });
 
-    gallery.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].pageX - gallery.offsetLeft;
+    // Mobile Touch Support
+    let touchStartX = 0;
+    let touchScrollLeft = 0;
+
+    container.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].pageX;
+        touchScrollLeft = container.scrollLeft;
     });
 
-    gallery.addEventListener('touchmove', (e) => {
-        if (startX) {
-            const x = e.touches[0].pageX - gallery.offsetLeft;
-            const walk = (x - startX) * 2; // Adjust swipe speed here as well
-            gallery.scrollLeft = gallery.scrollLeft - walk;
-            startX = x;
-        }
+    container.addEventListener("touchmove", (e) => {
+        const touchMoveX = e.touches[0].pageX;
+        const walk = (touchMoveX - touchStartX) * 2; // Adjust speed
+        container.scrollLeft = touchScrollLeft - walk;
     });
 });
