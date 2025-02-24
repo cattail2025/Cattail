@@ -461,73 +461,7 @@ body.dark-mode {
     }
 }
 
-/* General Section Styling */
-#family-welcome {
-    background-color: #f5f5f5;  /* Light background */
-    padding: 40px;
-    text-align: center;
-}
-
-/* Title */
-#family-welcome h2 {
-    font-family: 'Poppins', sans-serif;  /* Poppins font */
-    color: black;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-/* Paragraph text */
-#family-welcome p {
-    font-family: 'Poppins', sans-serif;  /* Poppins font */
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-/* Number Animation */
-#visitor-count {
-    font-family: 'Poppins', sans-serif;  /* Poppins font */
-    color: black;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#visitor-number {
-    font-weight: bold;
-    animation: numberAnimation 2s ease-in-out forwards;
-}
-
-/* Filling Bar */
-#filling-bar {
-    width: 100%;
-    height: 20px;
-    background-color: #ddd;  /* Light gray background */
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-#filling-bar::after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 0; /* Initially no filling */
-    background-color: #007bff;  /* Blue color */
-    border-radius: 10px;
-    animation: fillAnimation 2s ease-in-out forwards;
-}
-
-/* Animation for filling bar */
-@keyframes fillAnimation {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 90%; /* You can adjust this width to match your desired filling level (for 30 customers) */
-    }
-}
-
-/* Number animation from 0 to 30 */
-@keyframes numberAnimation {
+ {
     0% {
         content: '0';
     }
@@ -536,27 +470,64 @@ body.dark-mode {
     }
 }
 
-/* Call to Action */
-.cta-message {
-    font-family: 'Poppins', sans-serif;  /* Poppins font */
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 20px;
+/* Family-Oriented Section */
+#family-welcome {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
 }
 
-/* Reservation Button */
+#family-welcome h2 {
+    font-size: 2.5rem;
+    color: #000000; /* Black color */
+    font-family: 'Poppins', sans-serif;
+}
+
+#family-welcome p {
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+#visitor-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#visitor-number {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+#filling-bar {
+    width: 0;
+    height: 20px;
+    background-color: #4caf50; /* Blue filling bar */
+    transition: width 1s ease-in-out;
+}
+
+.cta-message {
+    font-size: 1.4rem;
+    color: #000000;
+}
+
 .reserve-button {
-    font-family: 'Poppins', sans-serif;  /* Poppins font */
-    font-size: 18px;
-    color: white;
-    background-color: #007bff;  /* Blue button */
-    padding: 15px 30px;
-    border-radius: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .reserve-button:hover {
-    background-color: #0056b3;  /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
