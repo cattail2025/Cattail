@@ -118,7 +118,7 @@ function toggleMenu() {
 // Number Animation and Filling Bar
 document.addEventListener('DOMContentLoaded', function () {
     const visitorNumber = document.getElementById('visitor-number');
-    const fillingBar = document.getElementById('filling-bar').querySelector('::after');
+    const fillingBar = document.getElementById('filling-bar');
 
     // Animate number from 0 to 30
     let currentNumber = 0;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const numberInterval = setInterval(function() {
         if (currentNumber < targetNumber) {
             currentNumber++;
-            visitorNumber.textContent = currentNumber;
+            visitorNumber.textContent = `${currentNumber}人`;  // Display the number with "人" (person) in Japanese
         } else {
             clearInterval(numberInterval);
         }
@@ -144,5 +144,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 60); // Adjust speed by modifying interval time
 });
-
 
