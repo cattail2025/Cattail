@@ -115,18 +115,17 @@ function toggleMenu() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const fillingBar = document.getElementById('filling-bar');
+document.addEventListener('DOMContentLoaded', function() {
+  const visitorNumber = document.getElementById('visitor-number');
+  const targetNumber = 28; // Final number
 
-    // Bar filling animation from 0% to 90%
-    let currentWidth = 0;
-    const targetWidth = 90;
-    const widthInterval = setInterval(function () {
-        if (currentWidth < targetWidth) {
-            currentWidth++;
-            fillingBar.style.width = currentWidth + '%';
-        } else {
-            clearInterval(widthInterval);
-        }
-    }, 60); // Adjust speed by changing the interval time
+  let currentNumber = 0;
+  let interval = setInterval(function() {
+    if (currentNumber < targetNumber) {
+      currentNumber++;
+      visitorNumber.textContent = currentNumber;
+    } else {
+      clearInterval(interval); // Stop the interval when the number reaches the target
+    }
+  }, 100); // Adjust speed by changing the interval time
 });
