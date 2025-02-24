@@ -365,33 +365,4 @@ body.dark-mode {
     background-color: #555;
 }
 
-/* Promo Banner Styling */
-.promo-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ff9800;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 16px;
-  z-index: 1000;
-  display: none; /* Initially hidden */
-}
 
-/* Close Button Styling */
-.close-banner {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background-color: transparent;
-  color: white;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.close-banner:hover {
-  color: black;
-}
