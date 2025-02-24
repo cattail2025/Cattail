@@ -365,6 +365,7 @@ body.dark-mode {
     background-color: #555;
 }
 
+/* Promo Banner Styling */
 .promo-banner {
   position: fixed;
   top: 0;
@@ -376,8 +377,10 @@ body.dark-mode {
   padding: 15px;
   font-size: 16px;
   z-index: 1000;
+  display: none; /* Initially hidden */
 }
 
+/* Close Button Styling */
 .close-banner {
   position: absolute;
   top: 10px;
