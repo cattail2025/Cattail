@@ -115,22 +115,7 @@ function toggleMenu() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const visitorNumber = document.getElementById('visitor-number');
-  const targetNumber = 28; // Final number
-
-  let currentNumber = 0;
-  let interval = setInterval(function() {
-    if (currentNumber < targetNumber) {
-      currentNumber++;
-      visitorNumber.textContent = currentNumber;
-    } else {
-      clearInterval(interval); // Stop the interval when the number reaches the target
-    }
-  }, 100); // Adjust speed by changing the interval time
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const slider = document.querySelector(".service-slider");
     const container = document.querySelector(".service-container");
     let isDown = false;
@@ -158,23 +143,22 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
+        const walk = (x - startX) * 2; // Scroll speed
         slider.scrollLeft = scrollLeft - walk;
     });
 
-    // Touch support
-    let touchStartX;
-    let touchScrollLeft;
+    // Mobile Touch Support
+    let touchStartX = 0;
+    let touchScrollLeft = 0;
 
     slider.addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].clientX;
+        touchStartX = e.touches[0].pageX;
         touchScrollLeft = slider.scrollLeft;
     });
 
     slider.addEventListener("touchmove", (e) => {
-        e.preventDefault();
-        const touchX = e.touches[0].clientX;
-        const walk = (touchX - touchStartX) * 2;
+        const touchMoveX = e.touches[0].pageX;
+        const walk = (touchMoveX - touchStartX) * 2; // Scroll speed
         slider.scrollLeft = touchScrollLeft - walk;
     });
 });
