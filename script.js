@@ -115,3 +115,34 @@ function toggleMenu() {
     }
 }
 
+// Number Animation and Filling Bar
+document.addEventListener('DOMContentLoaded', function () {
+    const visitorNumber = document.getElementById('visitor-number');
+    const fillingBar = document.getElementById('filling-bar').querySelector('::after');
+
+    // Animate number from 0 to 30
+    let currentNumber = 0;
+    const targetNumber = 30;
+    const numberInterval = setInterval(function() {
+        if (currentNumber < targetNumber) {
+            currentNumber++;
+            visitorNumber.textContent = currentNumber;
+        } else {
+            clearInterval(numberInterval);
+        }
+    }, 100);
+
+    // Animate the filling bar from 0 to 90% width
+    let currentWidth = 0;
+    const targetWidth = 90; // You can adjust this as per your desired percentage
+    const widthInterval = setInterval(function() {
+        if (currentWidth < targetWidth) {
+            currentWidth++;
+            fillingBar.style.width = currentWidth + '%';
+        } else {
+            clearInterval(widthInterval);
+        }
+    }, 60); // Adjust speed by modifying interval time
+});
+
+
