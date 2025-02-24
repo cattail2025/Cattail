@@ -401,6 +401,7 @@ body.dark-mode {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Added smooth transition */
 }
 
 .menu-toggle .bar {
@@ -408,11 +409,28 @@ body.dark-mode {
     height: 4px;
     background-color: #333;
     margin: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Added smooth transition */
 }
 
+/* When menu is active, animate the bars into an "X" shape */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Nav menu styling */
 .nav-menu {
     display: flex;
     list-style: none;
+    opacity: 0; /* Start with invisible */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
 }
 
 .nav-menu.active {
@@ -424,8 +442,10 @@ body.dark-mode {
     width: 100%;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 1; /* Fade in when active */
 }
 
+/* Responsive styling for small screens */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
