@@ -549,24 +549,43 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
-.best-seller-swiper .swiper-wrapper {
+.best-seller-swiper {
+  width: 100%;
+  padding: 20px 0; /* Adjust padding for better spacing */
+}
+
+.swiper-slide {
+  background-color: #fff;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
-}
-
-.best-seller-swiper .swiper-slide {
-  width: 48%; /* Adjust width to have two items in one row */
-  margin-bottom: 20px; /* Add space between rows */
-}
-
-.best-seller-swiper .swiper-slide img {
-  width: 100%; /* Make sure images are responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.best-seller-swiper .swiper-slide p,
-.best-seller-swiper .swiper-slide a {
-  text-align: center;
+  align-items: center;
   padding: 10px;
+  box-sizing: border-box;
+}
+
+.swiper-slide img {
+  width: 100%;  /* Ensure the image takes the full width */
+  height: auto;
+  max-width: 250px;  /* Limit image size to fit better */
+  margin-bottom: 10px;
+}
+
+.swiper-slide p {
+  font-size: 14px;  /* Reduce text size to fit better */
+  margin: 5px 0;
+}
+
+.swiper-slide a {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #007bff;
 }
