@@ -549,66 +549,63 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
-/* Style for the toggle button */
-.toggle-btn {
-  cursor: pointer;
+/* Best Seller Section Styles */
+.best-seller-container {
+  text-align: center;
+  margin: 50px 0;
 }
 
-.best-seller-section {
-  display: none; /* Hide by default */
-  padding: 20px;
-  background-color: #f8f8f8; /* Optional: background color */
+.best-seller-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-/* Show the Best Seller section when 'active' class is added */
-.best-seller-section.active {
-  display: block;
-}
-
-/* Best Seller gallery styles */
-.best-seller-gallery {
+.best-seller-swiper {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  max-width: 100%;
-  margin-top: 20px;
+  align-items: center;
 }
 
-.best-seller-gallery .best-seller-item {
-  width: 30%; /* Adjust the width of each item */
-  max-width: 300px;
+.swiper-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.swiper-slide {
+  width: 300px;
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.best-seller-gallery img {
+.swiper-slide img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.best-seller-gallery .offer-title {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  font-weight: bold;
+.swiper-slide p {
+  margin: 10px 0;
 }
 
-.best-seller-gallery .offer-description {
-  font-size: 1rem;
-  margin-top: 5px;
-}
-
-.reserve-link {
-  display: inline-block;
-  background-color: #00A9FF;
-  padding: 10px;
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
   color: #fff;
-  text-decoration: none;
-  margin-top: 10px;
-  text-align: center;
-  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.reserve-link:hover {
-  background-color: #007BB5;
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
 }
