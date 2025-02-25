@@ -565,24 +565,15 @@ body.dark-mode {
   margin-bottom: 30px;
 }
 
-.best-seller-swiper {
+.best-seller-list {
   display: flex;
-  flex-direction: column; /* Stack items in a column */
-  align-items: center; /* Center the cards horizontally */
-  gap: 20px; /* Gap between rows */
-  padding: 0 10px;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center everything */
+  gap: 20px; /* Space between items */
   width: 100%;
 }
 
-.swiper-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 20px; /* Space between rows */
-}
-
-.swiper-slide {
+.best-seller-card {
   width: 250px; /* Adjust width */
   background-color: #fff;
   text-align: center;
@@ -591,24 +582,24 @@ body.dark-mode {
   padding: 15px;
 }
 
-.swiper-slide img {
+.best-seller-card img {
   width: 100%;
   border-radius: 10px;
 }
 
-.swiper-slide p {
+.best-seller-card p {
   font-size: 14px;
   color: #333;
   padding: 10px;
 }
 
-.swiper-slide a {
+.best-seller-card a {
   display: block;
   margin-top: 10px;
   color: #007bff;
   text-decoration: none;
 }
 
-.swiper-slide a:hover {
+.best-seller-card a:hover {
   text-decoration: underline;
 }
