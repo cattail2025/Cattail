@@ -573,18 +573,49 @@ body.dark-mode {
   width: 100%;
 }
 
+/* Best Seller Section */
+.best-seller-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.best-seller-container h2 {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.best-seller-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
 /* Best Seller Card */
 .best-seller-card {
-  width: 220px; /* Adjust width to make cards smaller */
+  width: 220px;
   background-color: #fff;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px;
   opacity: 0; /* Initially hide the cards */
-  transform: translateY(50px); /* Move the cards down */
-  animation: fadeInUp 0.6s ease-out forwards; /* Animation trigger */
-  animation-delay: 0.3s; /* Delay to make it more dynamic */
+  transform: translateY(50px); /* Initially offset the card */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+  position: sticky;
+  top: 60px; /* When the card sticks to the top, we want it to be a little offset */
+}
+
+/* When cards are in the viewport (the sticky effect makes them appear) */
+.best-seller-card:in-viewport {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
 }
 
 .best-seller-card img {
@@ -601,8 +632,8 @@ body.dark-mode {
 .best-seller-card a {
   display: block;
   margin-top: 10px;
-  color: #add8e6; /* Light blue text */
-  background-color: #007bff; /* Blue background */
+  color: #add8e6;
+  background-color: #007bff;
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
@@ -610,24 +641,7 @@ body.dark-mode {
 }
 
 .best-seller-card a:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
   color: white;
   text-decoration: none;
-}
-
-/* Keyframes for pop-up animation */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply animation when element is in viewport */
-.best-seller-card:in-viewport {
-  animation: fadeInUp 0.6s ease-out forwards;
 }
