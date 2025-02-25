@@ -167,75 +167,75 @@
 </head>
 
   <!-- Best Seller Section -->
-  <div class="best-seller-container">
-    <h2>Best Seller</h2>
-    <div class="best-seller-swiper swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-color: #FFEBEE;">
-          <img src="service1.jpg" alt="Service 1">
-          <p>【レディース限定】スチームシェービング基本セットメニュー（カット別）</p>
-          <p>Price: ¥5500</p>
-          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
-        </div>
-        <div class="swiper-slide" style="background-color: #E3F2FD;">
-          <img src="service2.jpg" alt="Service 2">
-          <p>レディースアイブロウトリミング</p>
-          <p>Price: ¥1200</p>
-          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
-        </div>
-        <div class="swiper-slide" style="background-color: #FFF3E0;">
-          <img src="service3.jpg" alt="Service 3">
-          <p>【レディース限定】カラー+補修トリートメント</p>
-          <p>Price: ¥4500</p>
-          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
-        </div>
-        <div class="swiper-slide" style="background-color: #FFCDD2;">
-          <img src="service4.jpg" alt="Service 4">
-          <p>【レディース限定】カット+カラー</p>
-          <p>Price: ¥6300</p>
-          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
-        </div>
-        <div class="swiper-slide" style="background-color: #C8E6C9;">
-          <img src="service5.jpg" alt="Service 5">
-          <p>【メンズ限定】白髪染め+基本セットメニュー</p>
-          <p>Price: ¥6400</p>
-          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
-        </div>
-        <div class="swiper-slide" style="background-color: #FFEB3B;">
-          <img src="service6.jpg" alt="Service 6">
-          <p>【メンズ限定】基本セットメニュー</p>
-          <p>Price: ¥3600</p>
-          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
-        </div>
+<div class="best-seller-container">
+  <h2>Best Seller</h2>
+  <div class="best-seller-swiper swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-color: #FFEBEE;">
+        <img src="service1.jpg" alt="Service 1">
+        <p>【レディース限定】スチームシェービング基本セットメニュー（カット別）</p>
+        <p>Price: ¥5500</p>
+        <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
       </div>
-      <button class="swiper-button-prev"> &lt; </button>
-      <button class="swiper-button-next"> &gt; </button>
+      <div class="swiper-slide" style="background-color: #E3F2FD;">
+        <img src="service2.jpg" alt="Service 2">
+        <p>レディースアイブロウトリミング</p>
+        <p>Price: ¥1200</p>
+        <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+      </div>
+      <div class="swiper-slide" style="background-color: #FFF3E0;">
+        <img src="service3.jpg" alt="Service 3">
+        <p>【レディース限定】カラー+補修トリートメント</p>
+        <p>Price: ¥4500</p>
+        <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+      </div>
+      <div class="swiper-slide" style="background-color: #FFCDD2;">
+        <img src="service4.jpg" alt="Service 4">
+        <p>【レディース限定】カット+カラー</p>
+        <p>Price: ¥6300</p>
+        <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+      </div>
+      <div class="swiper-slide" style="background-color: #C8E6C9;">
+        <img src="service5.jpg" alt="Service 5">
+        <p>【メンズ限定】白髪染め+基本セットメニュー</p>
+        <p>Price: ¥6400</p>
+        <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+      </div>
+      <div class="swiper-slide" style="background-color: #FFEB3B;">
+        <img src="service6.jpg" alt="Service 6">
+        <p>【メンズ限定】基本セットメニュー</p>
+        <p>Price: ¥3600</p>
+        <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+      </div>
     </div>
+    <!-- Navigation Buttons -->
+    <button class="swiper-button-prev"> &lt; </button>
+    <button class="swiper-button-next"> &gt; </button>
   </div>
+</div>
 
-  <!-- Add Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Add Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Swiper Initialization -->
-  <script>
-    var swiper = new Swiper('.best-seller-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+<!-- Swiper Initialization -->
+<script>
+  var swiper = new Swiper('.best-seller-swiper', {
+    slidesPerView: 1,  // Show one slide at a time by default
+    spaceBetween: 10,   // Space between slides
+    navigation: {
+      nextEl: '.swiper-button-next',  // Next button
+      prevEl: '.swiper-button-prev',  // Previous button
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,  // Show two slides for screens 768px and above
       },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
+      1024: {
+        slidesPerView: 3,  // Show three slides for screens 1024px and above
       },
-    });
-  </script>
-</body>
+    },
+  });
+</script>
     
     <!-- Services and Contact Sections (Unchanged) -->
     <section id="services" data-aos="fade-right">
