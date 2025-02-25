@@ -115,11 +115,11 @@ function toggleMenu() {
     }
 }
 
-document.getElementById("best-seller-toggle").addEventListener("click", function() {
-  const section = document.getElementById("best-seller");
-  const toggleButton = document.getElementById("best-seller-toggle");
-  
-  section.style.display = section.style.display === "block" ? "none" : "block";
-  toggleButton.classList.toggle("active");
-});
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.getElementById("toggle-btn");
+  const bestSellerSection = document.querySelector(".best-seller-section");
 
+  toggleButton.addEventListener("click", function() {
+    bestSellerSection.classList.toggle("active");
+  });
+});
