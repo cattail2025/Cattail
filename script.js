@@ -114,3 +114,21 @@ function toggleMenu() {
         menu.style.transform = "translateX(100%)"; // Slide out
     }
 }
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.best-seller-card');
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');  // Add 'visible' class when in view
+          observer.unobserve(entry.target); // Stop observing once the card has been revealed
+        }
+      });
+    }, { threshold: 0.5 });  // Trigger when 50% of the card is in view
+
+    cards.forEach(card => observer.observe(card));  // Observe each card
+  });
+</script>
+
