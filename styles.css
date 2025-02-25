@@ -549,33 +549,48 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
-.best-seller-swiper {
+/* Center the whole container */
+.best-seller-container {
   width: 100%;
-  padding: 20px 0; /* Adjust padding for better spacing */
+  max-width: 1200px; /* Limit the width to prevent stretching */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px;
+  text-align: center;
 }
 
+/* Swiper container styles */
+.best-seller-swiper {
+  width: 100%;
+  padding: 10px 0; /* Adjust padding */
+}
+
+/* Style for each slide */
 .swiper-slide {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
+  margin: 10px;
 }
 
+/* Image styles */
 .swiper-slide img {
-  width: 100%;  /* Ensure the image takes the full width */
+  width: 90%;  /* Adjust image width to fit nicely */
+  max-width: 180px;  /* Limit image size to prevent over-expansion */
   height: auto;
-  max-width: 250px;  /* Limit image size to fit better */
   margin-bottom: 10px;
 }
 
+/* Text styles */
 .swiper-slide p {
-  font-size: 14px;  /* Reduce text size to fit better */
+  font-size: 14px; /* Adjust font size */
   margin: 5px 0;
 }
 
+/* Button style */
 .swiper-slide a {
   padding: 5px 10px;
   background-color: #007bff;
@@ -586,6 +601,22 @@ body.dark-mode {
   margin-top: 10px;
 }
 
+/* Swiper navigation buttons */
 .swiper-button-next, .swiper-button-prev {
   color: #007bff;
+}
+
+/* Ensure swiper behaves properly on small screens */
+@media screen and (max-width: 768px) {
+  .swiper-slide img {
+    max-width: 130px;  /* Make the image smaller for mobile */
+  }
+
+  .swiper-slide p {
+    font-size: 12px;
+  }
+
+  .swiper-slide a {
+    font-size: 10px;
+  }
 }
