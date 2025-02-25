@@ -549,63 +549,72 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
-/* Best Seller Section Styles */
+/* Best Seller Section Styling */
 .best-seller-container {
-  text-align: center;
-  margin: 50px 0;
+  width: 100%;
+  max-width: 1200px;  /* Limit the width */
+  margin: 0 auto;     /* Center the container */
+  padding: 50px 20px; /* Add padding for spacing */
+  box-sizing: border-box;
 }
 
-.best-seller-container h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.best-seller-swiper {
+.swiper-container {
+  width: 100%;
+  max-width: 100%;   /* Make sure it fits the container */
+  height: 400px;     /* Set height for the swiper section */
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .swiper-wrapper {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-slide {
-  width: 300px;
-  border-radius: 10px;
-  padding: 20px;
+  width: 80%; /* Make sure slides are not too wide */
+  margin: 10px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .swiper-slide img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
 }
 
-.swiper-slide p {
-  margin: 10px 0;
-}
-
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
   z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .swiper-button-prev {
-  left: 10px;
+  left: 0;
 }
 
 .swiper-button-next {
-  right: 10px;
+  right: 0;
+}
+
+/* Make the Best Seller section responsive */
+@media screen and (max-width: 768px) {
+  .swiper-container {
+    height: auto; /* Allow height to adjust on smaller screens */
+  }
+  
+  .swiper-slide {
+    width: 90%; /* Ensure smaller slides on mobile */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    font-size: 20px;
+    padding: 8px;
+  }
 }
