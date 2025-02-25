@@ -551,86 +551,64 @@ body.dark-mode {
 
 /* Best Seller Section */
 .best-seller-container {
-  width: 100%;
-  max-width: 1200px; /* Limit the width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* Swiper Container */
-.best-seller-swiper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-/* Swiper Wrapper */
-.swiper-wrapper {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap into rows */
-  justify-content: center; /* Align items in the center */
-}
-
-/* Style for each slide */
-.swiper-slide {
-  background-color: #fff;
-  width: calc(50% - 20px); /* Make each card take up 50% of the width with space in between */
-  margin: 10px; /* Adjust the space between the cards */
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
-  border-radius: 8px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
 }
 
-/* Image styling */
+.best-seller-container h2 {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.best-seller-swiper {
+  display: flex;
+  flex-direction: column; /* Stack items in a column */
+  align-items: center; /* Center the cards horizontally */
+  gap: 20px; /* Gap between rows */
+  padding: 0 10px;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px; /* Space between rows */
+}
+
+.swiper-slide {
+  width: 250px; /* Adjust width */
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
 .swiper-slide img {
-  width: 90%;
-  max-width: 180px;
-  height: auto;
-  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* Text styling */
 .swiper-slide p {
   font-size: 14px;
-  margin: 5px 0;
+  color: #333;
+  padding: 10px;
 }
 
-/* Button styling */
 .swiper-slide a {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 12px;
+  display: block;
   margin-top: 10px;
-}
-
-/* Swiper Navigation Buttons */
-.swiper-button-next, .swiper-button-prev {
   color: #007bff;
+  text-decoration: none;
 }
 
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-  .swiper-slide {
-    width: calc(100% - 20px);  /* Full width for mobile */
-  }
-  .swiper-slide img {
-    max-width: 130px;
-  }
-
-  .swiper-slide p {
-    font-size: 12px;
-  }
-
-  .swiper-slide a {
-    font-size: 10px;
-  }
+.swiper-slide a:hover {
+  text-decoration: underline;
 }
