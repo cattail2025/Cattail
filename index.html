@@ -161,57 +161,82 @@
         </a>
     </div>
     
-    <!-- Best Seller Section -->
-<div class="best-seller-container">
-  <div class="toggle-btn" id="best-seller-toggle">Best Seller</div>
-  
-  <div class="best-seller-section" id="best-seller">
-    <div class="best-seller-gallery">
-      <div class="best-seller-item">
-        <img src="service1.jpg" alt="Service 1">
-        <div class="offer-title">Service 1 Title</div>
-        <div class="offer-description">Description of service 1</div>
-        <a href="https://beauty.hotpepper.jp/slnH000743903/" class="reserve-link">Reserve Now</a>
-      </div>
-      
-      <div class="best-seller-item">
-        <img src="service2.jpg" alt="Service 2">
-        <div class="offer-title">Service 2 Title</div>
-        <div class="offer-description">Description of service 2</div>
-        <a href="https://beauty.hotpepper.jp/slnH000743903/" class="reserve-link">Reserve Now</a>
-      </div>
-      
-      <div class="best-seller-item">
-        <img src="service3.jpg" alt="Service 3">
-        <div class="offer-title">Service 3 Title</div>
-        <div class="offer-description">Description of service 3</div>
-        <a href="https://beauty.hotpepper.jp/slnH000743903/" class="reserve-link">Reserve Now</a>
-      </div>
+    <head>
+  <!-- Other head content -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
 
-      <div class="best-seller-item">
-        <img src="service4.jpg" alt="Service 4">
-        <div class="offer-title">Service 4 Title</div>
-        <div class="offer-description">Description of service 4</div>
-        <a href="https://beauty.hotpepper.jp/slnH000743903/" class="reserve-link">Reserve Now</a>
+  <!-- Best Seller Section -->
+  <div class="best-seller-container">
+    <h2>Best Seller</h2>
+    <div class="best-seller-swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-color: #FFEBEE;">
+          <img src="service1.jpg" alt="Service 1">
+          <p>【レディース限定】スチームシェービング基本セットメニュー（カット別）</p>
+          <p>Price: ¥5500</p>
+          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+        </div>
+        <div class="swiper-slide" style="background-color: #E3F2FD;">
+          <img src="service2.jpg" alt="Service 2">
+          <p>レディースアイブロウトリミング</p>
+          <p>Price: ¥1200</p>
+          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+        </div>
+        <div class="swiper-slide" style="background-color: #FFF3E0;">
+          <img src="service3.jpg" alt="Service 3">
+          <p>【レディース限定】カラー+補修トリートメント</p>
+          <p>Price: ¥4500</p>
+          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+        </div>
+        <div class="swiper-slide" style="background-color: #FFCDD2;">
+          <img src="service4.jpg" alt="Service 4">
+          <p>【レディース限定】カット+カラー</p>
+          <p>Price: ¥6300</p>
+          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+        </div>
+        <div class="swiper-slide" style="background-color: #C8E6C9;">
+          <img src="service5.jpg" alt="Service 5">
+          <p>【メンズ限定】白髪染め+基本セットメニュー</p>
+          <p>Price: ¥6400</p>
+          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+        </div>
+        <div class="swiper-slide" style="background-color: #FFEB3B;">
+          <img src="service6.jpg" alt="Service 6">
+          <p>【メンズ限定】基本セットメニュー</p>
+          <p>Price: ¥3600</p>
+          <a href="https://beauty.hotpepper.jp/slnH000743903/coupon/" target="_blank">Book Now</a>
+        </div>
       </div>
-
-      <div class="best-seller-item">
-        <img src="service5.jpg" alt="Service 5">
-        <div class="offer-title">Service 5 Title</div>
-        <div class="offer-description">Description of service 5</div>
-        <a href="https://beauty.hotpepper.jp/slnH000743903/" class="reserve-link">Reserve Now</a>
-      </div>
-
-      <div class="best-seller-item">
-        <img src="service6.jpg" alt="Service 6">
-        <div class="offer-title">Service 6 Title</div>
-        <div class="offer-description">Description of service 6</div>
-        <a href="https://beauty.hotpepper.jp/slnH000743903/" class="reserve-link">Reserve Now</a>
-      </div>
+      <button class="swiper-button-prev"> &lt; </button>
+      <button class="swiper-button-next"> &gt; </button>
     </div>
   </div>
-</div>
 
+  <!-- Add Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Swiper Initialization -->
+  <script>
+    var swiper = new Swiper('.best-seller-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+</body>
+    
     <!-- Services and Contact Sections (Unchanged) -->
     <section id="services" data-aos="fade-right">
         <h2>サービス</h2>
