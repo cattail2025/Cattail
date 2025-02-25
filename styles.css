@@ -8,8 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(45deg, #4CAF50, #9C27B0); 
-    background-size: cover;
+    background: linear-gradient(45deg, #4CAF50, #9C27B0);
+    background-size: 100% 100%; /* Ensures the gradient fits the viewport */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
