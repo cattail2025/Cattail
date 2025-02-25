@@ -9,11 +9,12 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: linear-gradient(45deg, #4CAF50, #9C27B0); /* Green to Purple Gradient */
-    background-size: cover;
+    background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
+    min-height: 100vh;
 }
 
 /* Header Styles */
