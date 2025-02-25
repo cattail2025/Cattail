@@ -569,10 +569,17 @@ body.dark-mode {
   margin: 0 auto;
 }
 
+.best-seller-swiper .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between items */
+}
+
 .best-seller-swiper .swiper-slide {
-  padding: 20px;
+  width: calc(50% - 10px); /* Two items per row */
   box-sizing: border-box;
   border-radius: 8px;
+  padding: 20px;
 }
 
 .best-seller-swiper .swiper-slide img {
