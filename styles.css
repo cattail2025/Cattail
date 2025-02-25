@@ -5,49 +5,12 @@
     box-sizing: border-box;
 }
 
-/* Ensure the background stays fixed and doesn't move */
 body {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(45deg, #4CAF50, #9C27B0); /* Green to Purple Gradient */
+    color: #fff;
 }
-
-/* Fix for "Best Offer" section to ensure no overflow and proper layout */
-.best-seller-section {
-    max-width: 100%;
-    overflow: hidden; /* Prevent content from overflowing */
-    height: 100vh; /* Adjust height to fit the screen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: #f8f8f8; /* Or any background color of your choice */
-}
-
-/* Make sure the content inside the section is well-contained */
-.best-seller-section .content {
-    width: 100%;
-    max-width: 1200px; /* Optional: limit content width */
-    padding: 20px; /* Optional: add padding */
-    box-sizing: border-box;
-}
-
-/* Smooth scrolling for anchors (already included) */
-a[href^="#"] {
-    scroll-behavior: smooth;
-}
-
-/* For mobile responsiveness, you might want to tweak the Best Offer section */
-@media (max-width: 768px) {
-    .best-seller-section {
-        height: auto; /* Allow height to adjust if needed */
-        padding: 20px;
-    }
-}
-
 
 /* Header Styles */
 header {
@@ -584,50 +547,4 @@ body.dark-mode {
 
 .reserve-button:hover {
   background-color: #0056b3;
-}
-
-/* Ensure the background stays fixed */
-body {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    margin: 0;
-    padding: 0;
-}
-
-/* Fix for "Best Seller" section to prevent overflow */
-.best-seller-section {
-    position: relative;
-    width: 100%;
-    height: auto; /* Allow section height to adapt to content */
-    overflow: hidden; /* Prevent overflow */
-    background-color: #f8f8f8; /* Optional: background color */
-    padding: 40px 0; /* Space above and below content */
-}
-
-/* Adjust the content inside the Best Seller section */
-.best-seller-section .content {
-    max-width: 1200px; /* Limit max width */
-    margin: 0 auto; /* Center align content */
-    padding: 20px; /* Add padding for spacing */
-    box-sizing: border-box;
-}
-
-/* Remove any potential large margin or padding affecting layout */
-.best-seller-section .content * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* For mobile responsiveness, adjust section height */
-@media (max-width: 768px) {
-    .best-seller-section {
-        padding: 20px; /* Less padding on smaller screens */
-    }
-
-    .best-seller-section .content {
-        padding: 10px; /* Less padding inside content */
-    }
 }
