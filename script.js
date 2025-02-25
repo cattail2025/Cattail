@@ -115,35 +115,11 @@ function toggleMenu() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const prevButton = document.querySelector('.swiper-button-prev');
-    const nextButton = document.querySelector('.swiper-button-next');
-    const swiperContainer = document.querySelector('.best-seller-swiper');
-    const swiperSlides = document.querySelectorAll('.swiper-slide');
-    let currentIndex = 0;
-
-    // Function to update the swiper display
-    function updateSwiper() {
-        swiperContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    // Event listener for previous button
-    prevButton.addEventListener('click', function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSwiper();
-        }
-    });
-
-    // Event listener for next button
-    nextButton.addEventListener('click', function() {
-        if (currentIndex < swiperSlides.length - 1) {
-            currentIndex++;
-            updateSwiper();
-        }
-    });
-
-    // Initialize the swiper container position
-    updateSwiper();
+document.getElementById("best-seller-toggle").addEventListener("click", function() {
+  const section = document.getElementById("best-seller");
+  const toggleButton = document.getElementById("best-seller-toggle");
+  
+  section.style.display = section.style.display === "block" ? "none" : "block";
+  toggleButton.classList.toggle("active");
 });
 
