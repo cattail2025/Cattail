@@ -549,3 +549,88 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
+/* Best Seller Section Styles */
+.best-seller-container {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+.best-seller-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.best-seller-swiper {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  gap: 20px;
+}
+
+.swiper-slide {
+  flex: 0 0 80%; /* Adjust size of each slide */
+  margin: 0 10px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.swiper-slide p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.swiper-slide a {
+  font-size: 1.1em;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 123, 255, 0.7);
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    flex: 0 0 90%; /* Make slides take more space on smaller screens */
+  }
+
+  .best-seller-container h2 {
+    font-size: 1.5em;
+  }
+}
