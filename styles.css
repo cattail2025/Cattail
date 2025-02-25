@@ -597,6 +597,31 @@ body.dark-mode {
   width: 100%;
 }
 
+/* Best Seller Section */
+.best-seller-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  background-color: #f5f5f5; /* Added background color to help visibility */
+}
+
+.best-seller-container h2 {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.best-seller-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
 /* Best Seller Card */
 .best-seller-card {
   width: 220px;
@@ -608,11 +633,11 @@ body.dark-mode {
   opacity: 0; /* Initially hide the cards */
   transform: translateY(50px); /* Initially offset the card */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
-  position: sticky;
-  top: 60px; /* When the card sticks to the top, we want it to be a little offset */
+  position: relative; /* Ensure the card stays in the normal document flow */
+  z-index: 1; /* Ensure cards are on top of other content */
 }
 
-/* When cards are in the viewport (the sticky effect makes them appear) */
+/* When cards are in the viewport (sticky effect to make them appear) */
 .best-seller-card:in-viewport {
   opacity: 1; /* Fade in */
   transform: translateY(0); /* Move to original position */
