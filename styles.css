@@ -586,69 +586,48 @@ body.dark-mode {
   background-color: #0056b3;
 }
 
-/* Best Seller Section Styles */
-.best-seller-container {
-  text-align: center;
-  margin: 50px 0;
+/* Ensure the background stays fixed */
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
 }
 
-.best-seller-container h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+/* Fix for "Best Seller" section to prevent overflow */
+.best-seller-section {
+    position: relative;
+    width: 100%;
+    height: auto; /* Allow section height to adapt to content */
+    overflow: hidden; /* Prevent overflow */
+    background-color: #f8f8f8; /* Optional: background color */
+    padding: 40px 0; /* Space above and below content */
 }
 
-.best-seller-swiper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Adjust the content inside the Best Seller section */
+.best-seller-section .content {
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center align content */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box;
 }
 
-.swiper-wrapper {
-  display: flex;
-  gap: 20px;
+/* Remove any potential large margin or padding affecting layout */
+.best-seller-section .content * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.swiper-slide {
-  width: 300px;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+/* For mobile responsiveness, adjust section height */
+@media (max-width: 768px) {
+    .best-seller-section {
+        padding: 20px; /* Less padding on smaller screens */
+    }
 
-.swiper-slide img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.swiper-slide p {
-  margin: 10px 0;
-}
-
-.swiper-button-prev, .swiper-button-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.swiper-button-prev {
-  left: 10px;
-}
-
-.swiper-button-next {
-  right: 10px;
-}
-
-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    .best-seller-section .content {
+        padding: 10px; /* Less padding inside content */
+    }
 }
