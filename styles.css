@@ -8,13 +8,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(45deg, #4CAF50, #9C27B0); /* Green to Purple Gradient */
-    background-size: 100% 100%;
+    background: linear-gradient(45deg, #4CAF50, #9C27B0); 
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -613,4 +614,10 @@ body.dark-mode {
 
 .swiper-button-next {
   right: 10px;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
