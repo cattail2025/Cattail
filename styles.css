@@ -552,10 +552,12 @@ body.dark-mode {
 /* Style for the toggle button */
 .toggle-btn {
   transition: all 0.3s ease;
+  cursor: pointer; /* Add cursor pointer */
 }
 
 .best-seller-section {
   display: none;
+  padding: 20px; /* Add padding to avoid elements touching the edges */
 }
 
 /* Show the Best Seller section when active */
@@ -563,27 +565,52 @@ body.dark-mode {
   display: block;
 }
 
-/* Add custom styling for Best Seller gallery swipe */
+/* Best Seller gallery styles */
 .best-seller-gallery {
   display: flex;
-  overflow-x: scroll;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Center the items */
+  gap: 15px; /* Add space between items */
+  max-width: 100%; /* Prevent gallery from being too wide */
+  margin-top: 20px;
+}
+
+.best-seller-gallery .best-seller-item {
+  width: 30%; /* Adjust the width of each item (can be 30% or less depending on your preference) */
+  max-width: 300px; /* Limit maximum width */
+  text-align: center;
 }
 
 .best-seller-gallery img {
-  width: 100%;
+  width: 100%; /* Make sure images fill their containers */
   height: auto;
-  flex-shrink: 0;
-  margin-right: 10px;
+  border-radius: 8px; /* Optional: Adds rounded corners to images */
 }
 
 .best-seller-gallery .offer-title {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .best-seller-gallery .offer-description {
-  text-align: center;
   font-size: 1rem;
+  margin-top: 5px;
 }
+
+.reserve-link {
+  display: inline-block;
+  background-color: #00A9FF;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 5px; /* Optional: rounded corners for the button */
+}
+
+.reserve-link:hover {
+  background-color: #007BB5;
+}
+
 
