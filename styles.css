@@ -5,18 +5,49 @@
     box-sizing: border-box;
 }
 
+/* Ensure the background stays fixed and doesn't move */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(45deg, #4CAF50, #9C27B0);
-    background-size: 100% 100%; /* Ensures the gradient fits the viewport */
     background-attachment: fixed;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
 }
+
+/* Fix for "Best Offer" section to ensure no overflow and proper layout */
+.best-seller-section {
+    max-width: 100%;
+    overflow: hidden; /* Prevent content from overflowing */
+    height: 100vh; /* Adjust height to fit the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f8f8f8; /* Or any background color of your choice */
+}
+
+/* Make sure the content inside the section is well-contained */
+.best-seller-section .content {
+    width: 100%;
+    max-width: 1200px; /* Optional: limit content width */
+    padding: 20px; /* Optional: add padding */
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling for anchors (already included) */
+a[href^="#"] {
+    scroll-behavior: smooth;
+}
+
+/* For mobile responsiveness, you might want to tweak the Best Offer section */
+@media (max-width: 768px) {
+    .best-seller-section {
+        height: auto; /* Allow height to adjust if needed */
+        padding: 20px;
+    }
+}
+
 
 /* Header Styles */
 header {
