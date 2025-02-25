@@ -114,12 +114,3 @@ function toggleMenu() {
         menu.style.transform = "translateX(100%)"; // Slide out
     }
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  const toggleButton = document.getElementById("toggle-btn");
-  const bestSellerSection = document.querySelector(".best-seller-section");
-
-  toggleButton.addEventListener("click", function() {
-    bestSellerSection.classList.toggle("active");
-  });
-});
