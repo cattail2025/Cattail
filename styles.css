@@ -609,3 +609,27 @@ body.dark-mode {
   color: white;
   text-decoration: none;
 }
+
+.center-tab {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    width: 80%; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+.menu-link {
+    color: lightpurple;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.menu-link:hover {
+    color: white; /* Change color when hovered */
+}
