@@ -610,16 +610,13 @@ body.dark-mode {
   text-decoration: none;
 }
 
-.center-tab {
+.service-tab {
     background-color: purple;
     color: white;
     text-align: center;
     padding: 20px;
-    position: absolute;
-    top: 50%; /* Vertically center */
-    left: 50%; /* Horizontally center */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    width: 80%; /* Adjust as needed */
+    margin-bottom: 30px; /* Adjust space below tab */
+    width: 100%; /* Make sure it spans across */
     border-radius: 10px;
 }
 
