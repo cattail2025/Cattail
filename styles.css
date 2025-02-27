@@ -613,10 +613,11 @@ body.dark-mode {
 /* Service Tab Styling */
 .service-tab {
     background-color: #8e44ad; /* Purple background */
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     border-radius: 8px;
-    margin-bottom: 20px; /* Add some space below the tab */
+    margin-bottom: 30px; /* Increase bottom margin to separate from the 6th card */
+    margin-top: 50px; /* Ensure the tab doesn't sit directly at the top of the page */
 }
 
 .service-tab p {
@@ -635,7 +636,7 @@ body.dark-mode {
     text-decoration: underline;
 }
 
-/* Optional: Adjust the margin-bottom for the service section to add some space */
+/* Optional: Adjust the margin for the menu section */
 .services {
-    margin-top: 30px; /* Ensure it doesn't touch the tab */
+    margin-top: 40px; /* Adds additional space between the tab and your services */
 }
