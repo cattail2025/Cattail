@@ -641,3 +641,62 @@ body.dark-mode {
 .services {
     margin-top: 40px; /* Adds additional space between the tab and your services */
 }
+
+/* Salon Atmosphere Section */
+#salon-atmosphere {
+    background: linear-gradient(135deg, #f8c9dc, #f3a6c7); /* Light pink gradient */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Atmosphere Container */
+.atmosphere-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Keeps spacing uniform */
+    max-width: 1200px; /* Ensures it doesn't go too wide */
+    margin: auto;
+}
+
+/* Individual Atmosphere Items */
+.atmosphere-item {
+    text-align: center;
+    width: 90%; /* Keeps layout aligned */
+    max-width: 800px; /* Matches other sections */
+}
+
+/* Images - Fit Perfectly */
+.atmosphere-item img {
+    width: 100%; /* Keeps images responsive */
+    max-width: 600px; /* Prevents them from being too large */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Text Formatting */
+.atmosphere-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Animation Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
