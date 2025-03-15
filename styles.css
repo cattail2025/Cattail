@@ -640,3 +640,9 @@ body.dark-mode {
 .services {
     margin-top: 40px; /* Adds additional space between the tab and your services */
 }
+
+.header img {
+    width: 100%;  /* Full width */
+    height: auto; /* Keeps original aspect ratio */
+    display: block; /* Removes extra spacing */
+}
