@@ -649,27 +649,28 @@ body.dark-mode {
     text-align: center;
 }
 
-/* Atmosphere Container */
+/* Atmosphere Container - Display in Row */
 .atmosphere-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px; /* Keeps spacing uniform */
-    max-width: 1200px; /* Ensures it doesn't go too wide */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers the items */
+    gap: 40px; /* Adds space between items */
+    max-width: 1200px;
     margin: auto;
 }
 
-/* Individual Atmosphere Items */
+/* Individual Atmosphere Items - Set Side by Side */
 .atmosphere-item {
-    text-align: center;
-    width: 90%; /* Keeps layout aligned */
-    max-width: 800px; /* Matches other sections */
+    display: flex;
+    flex-direction: column; /* Keeps text below the image */
+    align-items: center;
+    width: 30%; /* Makes sure 3 items fit in one row */
+    max-width: 350px; /* Prevents them from getting too big */
 }
 
 /* Images - Fit Perfectly */
 .atmosphere-item img {
-    width: 100%; /* Keeps images responsive */
-    max-width: 600px; /* Prevents them from being too large */
+    width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -678,7 +679,7 @@ body.dark-mode {
 /* Text Formatting */
 .atmosphere-item p {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     font-weight: bold;
 }
@@ -700,3 +701,4 @@ body.dark-mode {
         transform: translateY(0);
     }
 }
+
