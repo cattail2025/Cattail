@@ -644,28 +644,29 @@ body.dark-mode {
 
 /* Salon Atmosphere Section */
 #salon-atmosphere {
-    background: linear-gradient(135deg, #f8c9dc, #f3a6c7); /* Light pink gradient */
-    padding: 60px 20px;
+    background: linear-gradient(135deg, #add8e6, #87ceeb); /* Light blue gradient */
+    padding: 80px 20px; /* Increased padding to create a gap */
     text-align: center;
+    margin-bottom: 60px; /* Adds space between Salon Atmosphere & Contact */
 }
 
 /* Atmosphere Container - Display in Row */
 .atmosphere-container {
     display: flex;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    justify-content: center; /* Centers the items */
-    gap: 40px; /* Adds space between items */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
     max-width: 1200px;
     margin: auto;
 }
 
-/* Individual Atmosphere Items - Set Side by Side */
+/* Individual Atmosphere Items */
 .atmosphere-item {
     display: flex;
-    flex-direction: column; /* Keeps text below the image */
+    flex-direction: column;
     align-items: center;
-    width: 30%; /* Makes sure 3 items fit in one row */
-    max-width: 350px; /* Prevents them from getting too big */
+    width: 30%;
+    max-width: 350px;
 }
 
 /* Images - Fit Perfectly */
@@ -701,4 +702,3 @@ body.dark-mode {
         transform: translateY(0);
     }
 }
-
