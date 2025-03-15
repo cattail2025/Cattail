@@ -69,19 +69,19 @@ nav ul li a {
 
 /* Carousel Styles */
 .carousel {
-    position: relative; /* Change from absolute to relative */
+    position: absolute;
     width: 100%;
-    height: 100vh; /* Ensure full viewport height */
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Ensure it's above the background but below content */
+    z-index: -1;
 }
 
 .carousel-images {
     display: flex;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -89,7 +89,7 @@ nav ul li a {
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the full image is displayed without cropping */
+    object-fit: cover; /* Ensure it fills the section */
     opacity: 0;
     position: absolute;
     animation: slide 30s infinite;
