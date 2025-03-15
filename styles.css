@@ -89,7 +89,7 @@ nav ul li a {
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure it fills the section */
+    object-fit: contain; /* Ensures the full image is displayed without cropping */
     opacity: 0;
     position: absolute;
     animation: slide 30s infinite;
