@@ -122,7 +122,8 @@ section {
     background-color: black;
     color: white;
     padding: 80px 0;
-    font-family: 'Roboto Slab', serif; /* Apply Roboto Slab font */
+    font-family: 'Roboto Slab', serif;
+    margin-top: 130px; /* Added margin to push it down */
 }
 
 #about p {
@@ -140,7 +141,7 @@ section {
 
 /* Services Section */
 .service-container {
-    display: flex;
+    isplay: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
