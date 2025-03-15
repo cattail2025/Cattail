@@ -114,23 +114,3 @@ function toggleMenu() {
         menu.style.transform = "translateX(100%)"; // Slide out
     }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-in");
-
-    function fadeInOnScroll() {
-        fadeElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (elementTop < windowHeight * 0.9) { // 90% into the viewport
-                element.classList.add("visible");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", fadeInOnScroll);
-    fadeInOnScroll(); // Run on page load in case elements are already in view
-});
-
-
-
