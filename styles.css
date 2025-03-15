@@ -122,8 +122,7 @@ section {
     background-color: black;
     color: white;
     padding: 80px 0;
-    font-family: 'Roboto Slab', serif;
-    margin-top: 120px; /* Added margin to push it down */
+    font-family: 'Roboto Slab', serif; /* Apply Roboto Slab font */
 }
 
 #about p {
@@ -641,46 +640,3 @@ body.dark-mode {
 .services {
     margin-top: 40px; /* Adds additional space between the tab and your services */
 }
-
-/* Main Background (Light Pink 3D Gradient) */
-body {
-    background: linear-gradient(45deg, #ffb6c1, #ffc0cb, #ff69b4);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s infinite alternate;
-}
-
-/* Gradient Animation */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* 3D Texture Overlay */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("your-3d-texture.png"); /* Replace with your actual texture image */
-    opacity: 0.1;
-    z-index: -1;
-}
-
-/* ===== Salon Atmosphere Section ===== */
-#salon-atmosphere {
-    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Different Background */
-    color: white;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.salon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-}
-
