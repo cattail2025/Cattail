@@ -50,65 +50,44 @@ nav ul li a {
     font-size: 1.1rem;
 }
 
-/* Hero Section */
+/* Hero Section with Video */
 .hero {
-    padding-top: 100px; /* Increased padding */
-    text-align: center;
-    color: white;
-    height: 750px; /* Increased height */
     position: relative;
-    z-index: 1;
-}
-
-/* Hero Text */
-.hero-text {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-/* Carousel Styles */
-.carousel {
-    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Full viewport height */
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
 }
 
-.carousel-images {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure it fills the section */
-    opacity: 0;
+.hero video {
     position: absolute;
-    animation: slide 30s infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the section */
+    z-index: -1; /* Keeps the video in the background */
 }
 
-.carousel-image:nth-child(1) { animation-delay: 0s; }
-.carousel-image:nth-child(2) { animation-delay: 5s; }
-.carousel-image:nth-child(3) { animation-delay: 10s; }
-.carousel-image:nth-child(4) { animation-delay: 15s; }
-.carousel-image:nth-child(5) { animation-delay: 20s; }
-.carousel-image:nth-child(6) { animation-delay: 25s; }
+.hero h2,
+.hero p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Ensures the text is visible on the video */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+    padding: 0 20px;
+}
 
-@keyframes slide {
-    0%, 100% {
-        opacity: 0;
-    }
-    16.66%, 33% {
-        opacity: 1;
-    }
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
 }
 
 /* Sections */
